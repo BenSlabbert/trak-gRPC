@@ -1,0 +1,25 @@
+{
+  "name": "trak-grpc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trak gRPC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "export NODE_ENV=test || SET NODE_ENV=test && mocha test/**/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\""
+  },
+  "author": "https://github/BenSlabbert",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.6.1",
+    "grpc": "^1.17.0",
+    "npm": "^5.10.0"
+  },
+  "devDependencies": {
+    "grpc-tools": "^1.6.6"
+  }
+}
