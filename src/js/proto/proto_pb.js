@@ -60,8 +60,8 @@ proto.com.trak.grpc.HelloRequest.prototype.toObject = function(opt_includeInstan
  */
 proto.com.trak.grpc.HelloRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    firstname: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    lastname: jspb.Message.getFieldWithDefault(msg, 2, "")
+    firstName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    lastName: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -100,11 +100,11 @@ proto.com.trak.grpc.HelloRequest.deserializeBinaryFromReader = function(msg, rea
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFirstname(value);
+      msg.setFirstName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setLastname(value);
+      msg.setLastName(value);
       break;
     default:
       reader.skipField();
@@ -135,14 +135,14 @@ proto.com.trak.grpc.HelloRequest.prototype.serializeBinary = function() {
  */
 proto.com.trak.grpc.HelloRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFirstname();
+  f = message.getFirstName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getLastname();
+  f = message.getLastName();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -153,31 +153,31 @@ proto.com.trak.grpc.HelloRequest.serializeBinaryToWriter = function(message, wri
 
 
 /**
- * optional string firstName = 1;
+ * optional string first_name = 1;
  * @return {string}
  */
-proto.com.trak.grpc.HelloRequest.prototype.getFirstname = function() {
+proto.com.trak.grpc.HelloRequest.prototype.getFirstName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.com.trak.grpc.HelloRequest.prototype.setFirstname = function(value) {
+proto.com.trak.grpc.HelloRequest.prototype.setFirstName = function(value) {
   jspb.Message.setField(this, 1, value);
 };
 
 
 /**
- * optional string lastName = 2;
+ * optional string last_name = 2;
  * @return {string}
  */
-proto.com.trak.grpc.HelloRequest.prototype.getLastname = function() {
+proto.com.trak.grpc.HelloRequest.prototype.getLastName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.com.trak.grpc.HelloRequest.prototype.setLastname = function(value) {
+proto.com.trak.grpc.HelloRequest.prototype.setLastName = function(value) {
   jspb.Message.setField(this, 2, value);
 };
 

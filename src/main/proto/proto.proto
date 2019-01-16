@@ -3,8 +3,8 @@ option java_multiple_files = true;
 package com.trak.grpc;
 
 message HelloRequest {
-    string firstName = 1;
-    string lastName = 2;
+    string first_name = 1;
+    string last_name = 2;
 }
 
 message HelloResponse {
