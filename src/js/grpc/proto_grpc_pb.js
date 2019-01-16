@@ -2,7 +2,7 @@
 
 'use strict';
 var grpc = require('grpc');
-var src_main_proto_proto_pb = require('../../../src/main/proto/proto_pb.js');
+var src_main_proto_proto_pb = require('../proto/proto_pb.js');
 
 function serialize_com_trak_grpc_HelloRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.HelloRequest)) {
