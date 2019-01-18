@@ -1,6 +1,6 @@
 syntax = "proto3";
 option java_multiple_files = true;
-package com.trak.grpc;
+package io.github.benslabbert.trak.grpc;
 
 message HelloRequest {
     string first_name = 1;
