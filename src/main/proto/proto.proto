@@ -8,8 +8,9 @@ message Empty {
 
 message LatestResponseItem {
     string name = 1;
-    string url = 2;
+    string product_url = 2;
     string price = 3;
+    string image_url = 4;
 }
 
 message PageResponse {

@@ -179,8 +179,9 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
     proto.io.github.benslabbert.trak.grpc.LatestResponseItem.toObject = function(includeInstance, msg) {
         var f, obj = {
             name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-            url: jspb.Message.getFieldWithDefault(msg, 2, ""),
-            price: jspb.Message.getFieldWithDefault(msg, 3, "")
+            productUrl: jspb.Message.getFieldWithDefault(msg, 2, ""),
+            price: jspb.Message.getFieldWithDefault(msg, 3, ""),
+            imageUrl: jspb.Message.getFieldWithDefault(msg, 4, "")
         };
 
         if (includeInstance) {
@@ -223,11 +224,15 @@ proto.io.github.benslabbert.trak.grpc.LatestResponseItem.deserializeBinaryFromRe
                 break;
             case 2:
                 var value = /** @type {string} */ (reader.readString());
-                msg.setUrl(value);
+                msg.setProductUrl(value);
                 break;
             case 3:
                 var value = /** @type {string} */ (reader.readString());
                 msg.setPrice(value);
+                break;
+            case 4:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setImageUrl(value);
                 break;
             default:
                 reader.skipField();
@@ -265,7 +270,7 @@ proto.io.github.benslabbert.trak.grpc.LatestResponseItem.serializeBinaryToWriter
             f
         );
     }
-    f = message.getUrl();
+    f = message.getProductUrl();
     if (f.length > 0) {
         writer.writeString(
             2,
@@ -276,6 +281,13 @@ proto.io.github.benslabbert.trak.grpc.LatestResponseItem.serializeBinaryToWriter
     if (f.length > 0) {
         writer.writeString(
             3,
+            f
+        );
+    }
+    f = message.getImageUrl();
+    if (f.length > 0) {
+        writer.writeString(
+            4,
             f
         );
     }
@@ -298,16 +310,16 @@ proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.setName = fun
 
 
 /**
- * optional string url = 2;
+ * optional string product_url = 2;
  * @return {string}
  */
-proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.getUrl = function() {
+proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.getProductUrl = function() {
     return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.setUrl = function(value) {
+proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.setProductUrl = function(value) {
     jspb.Message.setField(this, 2, value);
 };
 
@@ -324,6 +336,21 @@ proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.getPrice = fu
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.setPrice = function(value) {
     jspb.Message.setField(this, 3, value);
+};
+
+
+/**
+ * optional string image_url = 4;
+ * @return {string}
+ */
+proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.getImageUrl = function() {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.io.github.benslabbert.trak.grpc.LatestResponseItem.prototype.setImageUrl = function(value) {
+    jspb.Message.setField(this, 4, value);
 };
 
 
