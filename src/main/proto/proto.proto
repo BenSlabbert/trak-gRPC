@@ -2,15 +2,30 @@ syntax = "proto3";
 option java_multiple_files = true;
 package io.github.benslabbert.trak.grpc;
 
-message HelloRequest {
-    string first_name = 1;
-    string last_name = 2;
+message Empty {
+
 }
 
-message HelloResponse {
-    string greeting = 1;
+message LatestResponseItem {
+    string name = 1;
+    string url = 2;
+    string price = 3;
 }
 
-service HelloService {
-    rpc hello (HelloRequest) returns (HelloResponse);
+message PageResponse {
+    int64 current_page_number = 1;
+    int64 last_page_number = 2;
+    int64 total_items = 3;
+    int64 page_size = 4;
+    bool is_last_page = 5;
+    bool is_first_page = 6;
+}
+
+message LatestResponse {
+    repeated LatestResponseItem items = 1;
+    PageResponse page = 2;
+}
+
+service LatestService {
+    rpc latest (Empty) returns (LatestResponse);
 }
