@@ -714,7 +714,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
     proto.io.github.benslabbert.trak.grpc.PriceMessage.toObject = function(includeInstance, msg) {
         var f, obj = {
             currentPrice: jspb.Message.getFieldWithDefault(msg, 1, 0),
-            salePrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
+            listedPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
             date: jspb.Message.getFieldWithDefault(msg, 3, 0)
         };
 
@@ -758,7 +758,7 @@ proto.io.github.benslabbert.trak.grpc.PriceMessage.deserializeBinaryFromReader =
                 break;
             case 2:
                 var value = /** @type {number} */ (reader.readInt64());
-                msg.setSalePrice(value);
+                msg.setListedPrice(value);
                 break;
             case 3:
                 var value = /** @type {number} */ (reader.readInt64());
@@ -800,7 +800,7 @@ proto.io.github.benslabbert.trak.grpc.PriceMessage.serializeBinaryToWriter = fun
             f
         );
     }
-    f = message.getSalePrice();
+    f = message.getListedPrice();
     if (f !== 0) {
         writer.writeInt64(
             2,
@@ -833,16 +833,16 @@ proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setCurrentPrice = f
 
 
 /**
- * optional int64 sale_price = 2;
+ * optional int64 listed_price = 2;
  * @return {number}
  */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.getSalePrice = function() {
+proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.getListedPrice = function() {
     return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setSalePrice = function(value) {
+proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setListedPrice = function(value) {
     jspb.Message.setField(this, 2, value);
 };
 
