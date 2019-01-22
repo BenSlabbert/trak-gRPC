@@ -26,6 +26,28 @@ function deserialize_io_github_benslabbert_trak_grpc_LatestResponse(buffer_arg) 
     return src_main_proto_proto_pb.LatestResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_io_github_benslabbert_trak_grpc_ProductRequest(arg) {
+    if (!(arg instanceof src_main_proto_proto_pb.ProductRequest)) {
+        throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.ProductRequest');
+    }
+    return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_ProductRequest(buffer_arg) {
+    return src_main_proto_proto_pb.ProductRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_io_github_benslabbert_trak_grpc_ProductResponse(arg) {
+    if (!(arg instanceof src_main_proto_proto_pb.ProductResponse)) {
+        throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.ProductResponse');
+    }
+    return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_ProductResponse(buffer_arg) {
+    return src_main_proto_proto_pb.ProductResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 var LatestServiceService = exports.LatestServiceService = {
     latest: {
@@ -42,3 +64,18 @@ var LatestServiceService = exports.LatestServiceService = {
 };
 
 exports.LatestServiceClient = grpc.makeGenericClientConstructor(LatestServiceService);
+var ProductServiceService = exports.ProductServiceService = {
+    product: {
+        path: '/io.github.benslabbert.trak.grpc.ProductService/product',
+        requestStream: false,
+        responseStream: false,
+        requestType: src_main_proto_proto_pb.ProductRequest,
+        responseType: src_main_proto_proto_pb.ProductResponse,
+        requestSerialize: serialize_io_github_benslabbert_trak_grpc_ProductRequest,
+        requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_ProductRequest,
+        responseSerialize: serialize_io_github_benslabbert_trak_grpc_ProductResponse,
+        responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_ProductResponse,
+    },
+};
+
+exports.ProductServiceClient = grpc.makeGenericClientConstructor(ProductServiceService);
