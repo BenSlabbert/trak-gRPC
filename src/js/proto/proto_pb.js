@@ -16,7 +16,6 @@ goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage', n
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.Empty', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.LatestResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageResponse', null, global);
-goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PriceMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductRequest', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductResponse', null, global);
@@ -1240,202 +1239,6 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setIsFirstPage = fu
  * @extends {jspb.Message}
  * @constructor
  */
-proto.io.github.benslabbert.trak.grpc.PriceMessage = function(opt_data) {
-    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.io.github.benslabbert.trak.grpc.PriceMessage, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-    proto.io.github.benslabbert.trak.grpc.PriceMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.PriceMessage';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-    /**
-     * Creates an object representation of this proto suitable for use in Soy templates.
-     * Field names that are reserved in JavaScript and will be renamed to pb_name.
-     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
-     * For the list of reserved names please see:
-     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
-     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
-     *     for transitional soy proto support: http://goto/soy-param-migration
-     * @return {!Object}
-     */
-    proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.toObject = function(opt_includeInstance) {
-        return proto.io.github.benslabbert.trak.grpc.PriceMessage.toObject(opt_includeInstance, this);
-    };
-
-
-    /**
-     * Static version of the {@see toObject} method.
-     * @param {boolean|undefined} includeInstance Whether to include the JSPB
-     *     instance for transitional soy proto support:
-     *     http://goto/soy-param-migration
-     * @param {!proto.io.github.benslabbert.trak.grpc.PriceMessage} msg The msg instance to transform.
-     * @return {!Object}
-     * @suppress {unusedLocalVariables} f is only used for nested messages
-     */
-    proto.io.github.benslabbert.trak.grpc.PriceMessage.toObject = function(includeInstance, msg) {
-        var f, obj = {
-            currentPrice: jspb.Message.getFieldWithDefault(msg, 1, 0),
-            listedPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
-            date: jspb.Message.getFieldWithDefault(msg, 3, 0)
-        };
-
-        if (includeInstance) {
-            obj.$jspbMessageInstance = msg;
-        }
-        return obj;
-    };
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.io.github.benslabbert.trak.grpc.PriceMessage}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.deserializeBinary = function(bytes) {
-    var reader = new jspb.BinaryReader(bytes);
-    var msg = new proto.io.github.benslabbert.trak.grpc.PriceMessage;
-    return proto.io.github.benslabbert.trak.grpc.PriceMessage.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.io.github.benslabbert.trak.grpc.PriceMessage} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.io.github.benslabbert.trak.grpc.PriceMessage}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.deserializeBinaryFromReader = function(msg, reader) {
-    while (reader.nextField()) {
-        if (reader.isEndGroup()) {
-            break;
-        }
-        var field = reader.getFieldNumber();
-        switch (field) {
-            case 1:
-                var value = /** @type {number} */ (reader.readInt64());
-                msg.setCurrentPrice(value);
-                break;
-            case 2:
-                var value = /** @type {number} */ (reader.readInt64());
-                msg.setListedPrice(value);
-                break;
-            case 3:
-                var value = /** @type {number} */ (reader.readInt64());
-                msg.setDate(value);
-                break;
-            default:
-                reader.skipField();
-                break;
-        }
-    }
-    return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.serializeBinary = function() {
-    var writer = new jspb.BinaryWriter();
-    proto.io.github.benslabbert.trak.grpc.PriceMessage.serializeBinaryToWriter(this, writer);
-    return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.io.github.benslabbert.trak.grpc.PriceMessage} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.serializeBinaryToWriter = function(message, writer) {
-    var f = undefined;
-    f = message.getCurrentPrice();
-    if (f !== 0) {
-        writer.writeInt64(
-            1,
-            f
-        );
-    }
-    f = message.getListedPrice();
-    if (f !== 0) {
-        writer.writeInt64(
-            2,
-            f
-        );
-    }
-    f = message.getDate();
-    if (f !== 0) {
-        writer.writeInt64(
-            3,
-            f
-        );
-    }
-};
-
-
-/**
- * optional int64 current_price = 1;
- * @return {number}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.getCurrentPrice = function() {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/** @param {number} value */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setCurrentPrice = function(value) {
-    jspb.Message.setField(this, 1, value);
-};
-
-
-/**
- * optional int64 listed_price = 2;
- * @return {number}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.getListedPrice = function() {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setListedPrice = function(value) {
-    jspb.Message.setField(this, 2, value);
-};
-
-
-/**
- * optional int64 date = 3;
- * @return {number}
- */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.getDate = function() {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/** @param {number} value */
-proto.io.github.benslabbert.trak.grpc.PriceMessage.prototype.setDate = function(value) {
-    jspb.Message.setField(this, 3, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
 proto.io.github.benslabbert.trak.grpc.LatestResponse = function(opt_data) {
     jspb.Message.initialize(this, opt_data, 0, -1, proto.io.github.benslabbert.trak.grpc.LatestResponse.repeatedFields_, null);
 };
@@ -1994,19 +1797,12 @@ proto.io.github.benslabbert.trak.grpc.ProductRequest.prototype.setProductId = fu
  * @constructor
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse = function(opt_data) {
-    jspb.Message.initialize(this, opt_data, 0, -1, proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.repeatedFields_, null);
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.io.github.benslabbert.trak.grpc.ProductStatsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
     proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.displayName = 'proto.io.github.benslabbert.trak.grpc.ProductStatsResponse';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.repeatedFields_ = [1];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2036,11 +1832,9 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
      */
     proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject = function(includeInstance, msg) {
         var f, obj = {
-            pricesList: jspb.Message.toObjectList(msg.getPricesList(),
-                proto.io.github.benslabbert.trak.grpc.PriceMessage.toObject, includeInstance),
-            minPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
-            maxPrice: jspb.Message.getFieldWithDefault(msg, 3, 0),
-            meanPrice: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
+            minPrice: jspb.Message.getFieldWithDefault(msg, 1, 0),
+            maxPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
+            meanPrice: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
             chartData: (f = msg.getChartData()) && proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject(includeInstance, f)
         };
 
@@ -2079,23 +1873,18 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.deserializeBinaryFrom
         var field = reader.getFieldNumber();
         switch (field) {
             case 1:
-                var value = new proto.io.github.benslabbert.trak.grpc.PriceMessage;
-                reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PriceMessage.deserializeBinaryFromReader);
-                msg.addPrices(value);
-                break;
-            case 2:
                 var value = /** @type {number} */ (reader.readInt64());
                 msg.setMinPrice(value);
                 break;
-            case 3:
+            case 2:
                 var value = /** @type {number} */ (reader.readInt64());
                 msg.setMaxPrice(value);
                 break;
-            case 4:
+            case 3:
                 var value = /** @type {number} */ (reader.readDouble());
                 msg.setMeanPrice(value);
                 break;
-            case 5:
+            case 4:
                 var value = new proto.io.github.benslabbert.trak.grpc.ChartDataMessage;
                 reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ChartDataMessage.deserializeBinaryFromReader);
                 msg.setChartData(value);
@@ -2129,39 +1918,31 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.serializeBi
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.serializeBinaryToWriter = function(message, writer) {
     var f = undefined;
-    f = message.getPricesList();
-    if (f.length > 0) {
-        writer.writeRepeatedMessage(
-            1,
-            f,
-            proto.io.github.benslabbert.trak.grpc.PriceMessage.serializeBinaryToWriter
-        );
-    }
     f = message.getMinPrice();
     if (f !== 0) {
         writer.writeInt64(
-            2,
+            1,
             f
         );
     }
     f = message.getMaxPrice();
     if (f !== 0) {
         writer.writeInt64(
-            3,
+            2,
             f
         );
     }
     f = message.getMeanPrice();
     if (f !== 0.0) {
         writer.writeDouble(
-            4,
+            3,
             f
         );
     }
     f = message.getChartData();
     if (f != null) {
         writer.writeMessage(
-            5,
+            4,
             f,
             proto.io.github.benslabbert.trak.grpc.ChartDataMessage.serializeBinaryToWriter
         );
@@ -2170,94 +1951,63 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.serializeBinaryToWrit
 
 
 /**
- * repeated PriceMessage prices = 1;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.PriceMessage>}
- */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getPricesList = function() {
-    return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.PriceMessage>} */ (
-        jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.PriceMessage, 1));
-};
-
-
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.PriceMessage>} value */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setPricesList = function(value) {
-    jspb.Message.setRepeatedWrapperField(this, 1, value);
-};
-
-
-/**
- * @param {!proto.io.github.benslabbert.trak.grpc.PriceMessage=} opt_value
- * @param {number=} opt_index
- * @return {!proto.io.github.benslabbert.trak.grpc.PriceMessage}
- */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.addPrices = function(opt_value, opt_index) {
-    return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.io.github.benslabbert.trak.grpc.PriceMessage, opt_index);
-};
-
-
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.clearPricesList = function() {
-    this.setPricesList([]);
-};
-
-
-/**
- * optional int64 min_price = 2;
+ * optional int64 min_price = 1;
  * @return {number}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMinPrice = function() {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMinPrice = function(value) {
-    jspb.Message.setField(this, 2, value);
+    jspb.Message.setField(this, 1, value);
 };
 
 
 /**
- * optional int64 max_price = 3;
+ * optional int64 max_price = 2;
  * @return {number}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMaxPrice = function() {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMaxPrice = function(value) {
-    jspb.Message.setField(this, 3, value);
+    jspb.Message.setField(this, 2, value);
 };
 
 
 /**
- * optional double mean_price = 4;
+ * optional double mean_price = 3;
  * @return {number}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMeanPrice = function() {
-    return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 4, 0.0));
+    return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
 };
 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMeanPrice = function(value) {
-    jspb.Message.setField(this, 4, value);
+    jspb.Message.setField(this, 3, value);
 };
 
 
 /**
- * optional ChartDataMessage chart_data = 5;
+ * optional ChartDataMessage chart_data = 4;
  * @return {?proto.io.github.benslabbert.trak.grpc.ChartDataMessage}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getChartData = function() {
     return /** @type{?proto.io.github.benslabbert.trak.grpc.ChartDataMessage} */ (
-        jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataMessage, 5));
+        jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataMessage, 4));
 };
 
 
 /** @param {?proto.io.github.benslabbert.trak.grpc.ChartDataMessage|undefined} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setChartData = function(value) {
-    jspb.Message.setWrapperField(this, 5, value);
+    jspb.Message.setWrapperField(this, 4, value);
 };
 
 
@@ -2271,7 +2021,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.clearChartD
  * @return {!boolean}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.hasChartData = function() {
-    return jspb.Message.getField(this, 5) != null;
+    return jspb.Message.getField(this, 4) != null;
 };
 
 
