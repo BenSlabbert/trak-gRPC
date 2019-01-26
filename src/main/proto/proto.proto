@@ -6,6 +6,22 @@ message Empty {
 
 }
 
+message ChartDataMessage {
+    repeated string labels = 1;
+    repeated ChartDataSetMessage data_sets = 2;
+}
+
+message ChartDataSetMessage {
+    string label = 1;
+    string fill_color = 2;
+    string stroke_color = 3;
+    string point_color = 4;
+    string point_stroke_color = 5;
+    string point_highlight_fill = 6;
+    string point_highlight_stroke = 7;
+    repeated int64 data = 8;
+}
+
 message ProductMessage {
     string name = 1;
     string product_url = 2;
@@ -48,6 +64,7 @@ message ProductStatsResponse {
     int64 min_price = 2;
     int64 max_price = 3;
     double mean_price = 4;
+    ChartDataMessage chart_data = 5;
 }
 
 service LatestService {
