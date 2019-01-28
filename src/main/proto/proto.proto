@@ -60,6 +60,18 @@ message ProductStatsResponse {
     ChartDataMessage chart_data = 4;
 }
 
+message SearchResponse {
+    repeated string results = 1;
+}
+
+message SearchRequest {
+    string search = 1;
+}
+
+service SearchService {
+    rpc search (SearchRequest) returns (SearchResponse);
+}
+
 service LatestService {
     rpc latest (Empty) returns (LatestResponse);
 }
