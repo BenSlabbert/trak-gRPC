@@ -11,6 +11,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.BrandMessage', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.CategoryMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.Empty', null, global);
@@ -711,13 +713,358 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.clearDataLis
  * @extends {jspb.Message}
  * @constructor
  */
-proto.io.github.benslabbert.trak.grpc.ProductMessage = function(opt_data) {
+proto.io.github.benslabbert.trak.grpc.BrandMessage = function(opt_data) {
     jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.BrandMessage, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+    proto.io.github.benslabbert.trak.grpc.BrandMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.BrandMessage';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.toObject = function(opt_includeInstance) {
+        return proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(opt_includeInstance, this);
+    };
+
+
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.io.github.benslabbert.trak.grpc.BrandMessage} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+            name: jspb.Message.getFieldWithDefault(msg, 2, "")
+        };
+
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.BrandMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinary = function(bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.io.github.benslabbert.trak.grpc.BrandMessage;
+    return proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.BrandMessage} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.BrandMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader = function(msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {number} */ (reader.readInt64());
+                msg.setId(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setName(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
+    }
+    return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.serializeBinary = function() {
+    var writer = new jspb.BinaryWriter();
+    proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.BrandMessage} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter = function(message, writer) {
+    var f = undefined;
+    f = message.getId();
+    if (f !== 0) {
+        writer.writeInt64(
+            1,
+            f
+        );
+    }
+    f = message.getName();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+};
+
+
+/**
+ * optional int64 id = 1;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.getId = function() {
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.setId = function(value) {
+    jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * optional string name = 2;
+ * @return {string}
+ */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.getName = function() {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.setName = function(value) {
+    jspb.Message.setField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage = function(opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.CategoryMessage, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+    proto.io.github.benslabbert.trak.grpc.CategoryMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.CategoryMessage';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+    /**
+     * Creates an object representation of this proto suitable for use in Soy templates.
+     * Field names that are reserved in JavaScript and will be renamed to pb_name.
+     * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+     * For the list of reserved names please see:
+     *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+     * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+     *     for transitional soy proto support: http://goto/soy-param-migration
+     * @return {!Object}
+     */
+    proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.toObject = function(opt_includeInstance) {
+        return proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject(opt_includeInstance, this);
+    };
+
+
+    /**
+     * Static version of the {@see toObject} method.
+     * @param {boolean|undefined} includeInstance Whether to include the JSPB
+     *     instance for transitional soy proto support:
+     *     http://goto/soy-param-migration
+     * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage} msg The msg instance to transform.
+     * @return {!Object}
+     * @suppress {unusedLocalVariables} f is only used for nested messages
+     */
+    proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject = function(includeInstance, msg) {
+        var f, obj = {
+            id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+            name: jspb.Message.getFieldWithDefault(msg, 2, "")
+        };
+
+        if (includeInstance) {
+            obj.$jspbMessageInstance = msg;
+        }
+        return obj;
+    };
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.CategoryMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinary = function(bytes) {
+    var reader = new jspb.BinaryReader(bytes);
+    var msg = new proto.io.github.benslabbert.trak.grpc.CategoryMessage;
+    return proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.CategoryMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReader = function(msg, reader) {
+    while (reader.nextField()) {
+        if (reader.isEndGroup()) {
+            break;
+        }
+        var field = reader.getFieldNumber();
+        switch (field) {
+            case 1:
+                var value = /** @type {number} */ (reader.readInt64());
+                msg.setId(value);
+                break;
+            case 2:
+                var value = /** @type {string} */ (reader.readString());
+                msg.setName(value);
+                break;
+            default:
+                reader.skipField();
+                break;
+        }
+    }
+    return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.serializeBinary = function() {
+    var writer = new jspb.BinaryWriter();
+    proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter(this, writer);
+    return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter = function(message, writer) {
+    var f = undefined;
+    f = message.getId();
+    if (f !== 0) {
+        writer.writeInt64(
+            1,
+            f
+        );
+    }
+    f = message.getName();
+    if (f.length > 0) {
+        writer.writeString(
+            2,
+            f
+        );
+    }
+};
+
+
+/**
+ * optional int64 id = 1;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.getId = function() {
+    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.setId = function(value) {
+    jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * optional string name = 2;
+ * @return {string}
+ */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.getName = function() {
+    return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.setName = function(value) {
+    jspb.Message.setField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage = function(opt_data) {
+    jspb.Message.initialize(this, opt_data, 0, -1, proto.io.github.benslabbert.trak.grpc.ProductMessage.repeatedFields_, null);
 };
 goog.inherits(proto.io.github.benslabbert.trak.grpc.ProductMessage, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
     proto.io.github.benslabbert.trak.grpc.ProductMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.ProductMessage';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.repeatedFields_ = [7];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -751,7 +1098,10 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
             productUrl: jspb.Message.getFieldWithDefault(msg, 2, ""),
             price: jspb.Message.getFieldWithDefault(msg, 3, ""),
             imageUrl: jspb.Message.getFieldWithDefault(msg, 4, ""),
-            id: jspb.Message.getFieldWithDefault(msg, 5, 0)
+            id: jspb.Message.getFieldWithDefault(msg, 5, 0),
+            brand: (f = msg.getBrand()) && proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(includeInstance, f),
+            categoriesList: jspb.Message.toObjectList(msg.getCategoriesList(),
+                proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject, includeInstance)
         };
 
         if (includeInstance) {
@@ -807,6 +1157,16 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader
             case 5:
                 var value = /** @type {number} */ (reader.readInt64());
                 msg.setId(value);
+                break;
+            case 6:
+                var value = new proto.io.github.benslabbert.trak.grpc.BrandMessage;
+                reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader);
+                msg.setBrand(value);
+                break;
+            case 7:
+                var value = new proto.io.github.benslabbert.trak.grpc.CategoryMessage;
+                reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReader);
+                msg.addCategories(value);
                 break;
             default:
                 reader.skipField();
@@ -870,6 +1230,22 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter = f
         writer.writeInt64(
             5,
             f
+        );
+    }
+    f = message.getBrand();
+    if (f != null) {
+        writer.writeMessage(
+            6,
+            f,
+            proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter
+        );
+    }
+    f = message.getCategoriesList();
+    if (f.length > 0) {
+        writer.writeRepeatedMessage(
+            7,
+            f,
+            proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter
         );
     }
 };
@@ -947,6 +1323,67 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getId = function(
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setId = function(value) {
     jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * optional BrandMessage brand = 6;
+ * @return {?proto.io.github.benslabbert.trak.grpc.BrandMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getBrand = function() {
+    return /** @type{?proto.io.github.benslabbert.trak.grpc.BrandMessage} */ (
+        jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.BrandMessage, 6));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.BrandMessage|undefined} value */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setBrand = function(value) {
+    jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.clearBrand = function() {
+    this.setBrand(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.hasBrand = function() {
+    return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * repeated CategoryMessage categories = 7;
+ * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>}
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getCategoriesList = function() {
+    return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} */ (
+        jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.CategoryMessage, 7));
+};
+
+
+/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} value */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setCategoriesList = function(value) {
+    jspb.Message.setRepeatedWrapperField(this, 7, value);
+};
+
+
+/**
+ * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.io.github.benslabbert.trak.grpc.CategoryMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.addCategories = function(opt_value, opt_index) {
+    return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.io.github.benslabbert.trak.grpc.CategoryMessage, opt_index);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.clearCategoriesList = function() {
+    this.setCategoriesList([]);
 };
 
 

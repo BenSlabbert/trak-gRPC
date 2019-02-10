@@ -22,12 +22,24 @@ message ChartDataSetMessage {
     repeated int64 data = 8;
 }
 
+message BrandMessage {
+    int64 id = 1;
+    string name = 2;
+}
+
+message CategoryMessage {
+    int64 id = 1;
+    string name = 2;
+}
+
 message ProductMessage {
     string name = 1;
     string product_url = 2;
     string price = 3;
     string image_url = 4;
     int64 id = 5;
+    BrandMessage brand = 6;
+    repeated CategoryMessage categories = 7;
 }
 
 message PageResponse {
