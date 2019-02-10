@@ -61,7 +61,13 @@ message ProductStatsResponse {
 }
 
 message SearchResponse {
-    repeated string results = 1;
+    repeated SearchResult results = 1;
+}
+
+message SearchResult {
+    string id = 1;
+    string name = 2;
+    float score = 3;
 }
 
 message SearchRequest {

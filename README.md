@@ -10,4 +10,4 @@ then move grpc files to
 
 ### java
 
-`mvn clean compile`
+`mvn clean install`
