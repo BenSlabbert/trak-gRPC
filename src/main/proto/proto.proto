@@ -75,7 +75,9 @@ message SearchRequest {
 }
 
 service SearchService {
-    rpc search (SearchRequest) returns (SearchResponse);
+    rpc product_search (SearchRequest) returns (SearchResponse);
+    rpc brand_search (SearchRequest) returns (SearchResponse);
+    rpc category_search (SearchRequest) returns (SearchResponse);
 }
 
 service LatestService {

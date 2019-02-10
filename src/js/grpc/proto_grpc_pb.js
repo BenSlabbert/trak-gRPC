@@ -72,8 +72,30 @@ function deserialize_io_github_benslabbert_trak_grpc_SearchResponse(buffer_arg) 
 
 
 var SearchServiceService = exports.SearchServiceService = {
-    search: {
-        path: '/io.github.benslabbert.trak.grpc.SearchService/search',
+    product_search: {
+        path: '/io.github.benslabbert.trak.grpc.SearchService/product_search',
+        requestStream: false,
+        responseStream: false,
+        requestType: src_main_proto_proto_pb.SearchRequest,
+        responseType: src_main_proto_proto_pb.SearchResponse,
+        requestSerialize: serialize_io_github_benslabbert_trak_grpc_SearchRequest,
+        requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchRequest,
+        responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
+        responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
+    },
+    brand_search: {
+        path: '/io.github.benslabbert.trak.grpc.SearchService/brand_search',
+        requestStream: false,
+        responseStream: false,
+        requestType: src_main_proto_proto_pb.SearchRequest,
+        responseType: src_main_proto_proto_pb.SearchResponse,
+        requestSerialize: serialize_io_github_benslabbert_trak_grpc_SearchRequest,
+        requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchRequest,
+        responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
+        responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
+    },
+    category_search: {
+        path: '/io.github.benslabbert.trak.grpc.SearchService/category_search',
         requestStream: false,
         responseStream: false,
         requestType: src_main_proto_proto_pb.SearchRequest,
