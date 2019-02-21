@@ -62,7 +62,12 @@ message ProductResponse {
 }
 
 message ProductRequest {
+
     int64 product_id = 1;
+    oneof optional_product_id {
+        int64 optional_productId_value = 2;
+        int64 optional_brandId_value = 3;
+    }
 }
 
 message ProductStatsResponse {
