@@ -4,6 +4,28 @@
 var grpc = require('grpc');
 var src_main_proto_proto_pb = require('../proto/proto_pb.js');
 
+function serialize_io_github_benslabbert_trak_grpc_BrandRequest(arg) {
+    if (!(arg instanceof src_main_proto_proto_pb.BrandRequest)) {
+        throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.BrandRequest');
+    }
+    return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_BrandRequest(buffer_arg) {
+    return src_main_proto_proto_pb.BrandRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_io_github_benslabbert_trak_grpc_BrandResponse(arg) {
+    if (!(arg instanceof src_main_proto_proto_pb.BrandResponse)) {
+        throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.BrandResponse');
+    }
+    return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_BrandResponse(buffer_arg) {
+    return src_main_proto_proto_pb.BrandResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_io_github_benslabbert_trak_grpc_Empty(arg) {
     if (!(arg instanceof src_main_proto_proto_pb.Empty)) {
         throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.Empty');
@@ -138,3 +160,18 @@ var ProductServiceService = exports.ProductServiceService = {
 };
 
 exports.ProductServiceClient = grpc.makeGenericClientConstructor(ProductServiceService);
+var BrandServiceService = exports.BrandServiceService = {
+    brand: {
+        path: '/io.github.benslabbert.trak.grpc.BrandService/brand',
+        requestStream: false,
+        responseStream: false,
+        requestType: src_main_proto_proto_pb.BrandRequest,
+        responseType: src_main_proto_proto_pb.BrandResponse,
+        requestSerialize: serialize_io_github_benslabbert_trak_grpc_BrandRequest,
+        requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_BrandRequest,
+        responseSerialize: serialize_io_github_benslabbert_trak_grpc_BrandResponse,
+        responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_BrandResponse,
+    },
+};
+
+exports.BrandServiceClient = grpc.makeGenericClientConstructor(BrandServiceService);
