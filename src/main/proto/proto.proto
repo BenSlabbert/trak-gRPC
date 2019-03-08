@@ -90,6 +90,16 @@ message BrandRequest {
     int64 brand_id = 1;
 }
 
+message CategoryRequest {
+    int64 category_id = 1;
+}
+
+message CategoryResponse {
+    int64 category_id = 1;
+    string name = 2;
+    repeated ProductMessage products = 3;
+}
+
 message BrandResponse {
     int64 brand_id = 1;
     string name = 2;
@@ -112,4 +122,8 @@ service ProductService {
 
 service BrandService {
     rpc brand (BrandRequest) returns (BrandResponse);
+}
+
+service CategoryService {
+    rpc category (CategoryRequest) returns (BrandResponse);
 }
