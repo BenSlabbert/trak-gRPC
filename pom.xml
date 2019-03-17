@@ -6,7 +6,7 @@
 
   <groupId>io.github.benslabbert.trak</groupId>
   <artifactId>grpc</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNPASHOT</version>
   <packaging>jar</packaging>
 
   <name>grpc</name>
