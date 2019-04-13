@@ -56,6 +56,17 @@ message LatestResponse {
     PageResponse page = 2;
 }
 
+message PromotionRequest {
+    oneof deal {
+        bool daily_deal = 1;
+        bool sale_deal = 2;
+    }
+}
+
+message PromotionResponse {
+    repeated ProductMessage products = 1;
+}
+
 message ProductResponse {
     ProductMessage product = 1;
     ProductStatsResponse stats = 2;
@@ -114,6 +125,10 @@ service SearchService {
 
 service LatestService {
     rpc latest (Empty) returns (LatestResponse);
+}
+
+service PromotionService {
+    rpc promotions (PromotionRequest) returns (PromotionResponse);
 }
 
 service ProductService {

@@ -81,6 +81,28 @@ function deserialize_io_github_benslabbert_trak_grpc_ProductResponse(buffer_arg)
   return src_main_proto_proto_pb.ProductResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_io_github_benslabbert_trak_grpc_PromotionRequest(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.PromotionRequest)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.PromotionRequest');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_PromotionRequest(buffer_arg) {
+  return src_main_proto_proto_pb.PromotionRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_io_github_benslabbert_trak_grpc_PromotionResponse(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.PromotionResponse)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.PromotionResponse');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_PromotionResponse(buffer_arg) {
+  return src_main_proto_proto_pb.PromotionResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_io_github_benslabbert_trak_grpc_SearchRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.SearchRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.SearchRequest');
@@ -156,6 +178,21 @@ var LatestServiceService = exports.LatestServiceService = {
 };
 
 exports.LatestServiceClient = grpc.makeGenericClientConstructor(LatestServiceService);
+var PromotionServiceService = exports.PromotionServiceService = {
+  promotions: {
+    path: '/io.github.benslabbert.trak.grpc.PromotionService/promotions',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.PromotionRequest,
+    responseType: src_main_proto_proto_pb.PromotionResponse,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_PromotionRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_PromotionRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_PromotionResponse,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_PromotionResponse,
+  },
+};
+
+exports.PromotionServiceClient = grpc.makeGenericClientConstructor(PromotionServiceService);
 var ProductServiceService = exports.ProductServiceService = {
   product: {
     path: '/io.github.benslabbert.trak.grpc.ProductService/product',
