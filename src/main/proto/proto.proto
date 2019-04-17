@@ -117,6 +117,14 @@ message BrandResponse {
     repeated ProductMessage products = 3;
 }
 
+message AddProductRequest {
+    string pl_id = 1;
+}
+
+message AddProductResponse {
+    int64 product_id = 1;
+}
+
 service SearchService {
     rpc productSearch (SearchRequest) returns (SearchResponse);
     rpc brandSearch (SearchRequest) returns (SearchResponse);
@@ -133,6 +141,7 @@ service PromotionService {
 
 service ProductService {
     rpc product (ProductRequest) returns (ProductResponse);
+    rpc addProduct (AddProductRequest) returns (AddProductResponse);
 }
 
 service BrandService {
