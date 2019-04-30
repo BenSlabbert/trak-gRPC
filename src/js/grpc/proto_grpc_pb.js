@@ -4,6 +4,28 @@
 var grpc = require('grpc');
 var src_main_proto_proto_pb = require('../proto/proto_pb.js');
 
+function serialize_io_github_benslabbert_trak_grpc_AddProductRequest(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.AddProductRequest)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.AddProductRequest');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_AddProductRequest(buffer_arg) {
+  return src_main_proto_proto_pb.AddProductRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_io_github_benslabbert_trak_grpc_AddProductResponse(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.AddProductResponse)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.AddProductResponse');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_AddProductResponse(buffer_arg) {
+  return src_main_proto_proto_pb.AddProductResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_io_github_benslabbert_trak_grpc_BrandRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.BrandRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.BrandRequest');
@@ -204,6 +226,17 @@ var ProductServiceService = exports.ProductServiceService = {
     requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_ProductRequest,
     responseSerialize: serialize_io_github_benslabbert_trak_grpc_ProductResponse,
     responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_ProductResponse,
+  },
+  addProduct: {
+    path: '/io.github.benslabbert.trak.grpc.ProductService/addProduct',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.AddProductRequest,
+    responseType: src_main_proto_proto_pb.AddProductResponse,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_AddProductRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_AddProductRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_AddProductResponse,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_AddProductResponse,
   },
 };
 
