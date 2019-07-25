@@ -8,8 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "google-protobuf": "^3.6.1",
-    "grpc": "^1.17.0",
-    "npm": "^6.9.0"
+    "grpc": "^1.17.0"
   },
   "devDependencies": {
     "grpc-tools": "^1.6.6"
