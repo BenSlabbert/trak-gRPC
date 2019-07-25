@@ -11,3 +11,7 @@ then move grpc files to
 ### java
 
 `mvn clean install`
+
+### Golang
+
+`./generatepb-golang.sh`
