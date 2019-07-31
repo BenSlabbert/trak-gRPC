@@ -56,15 +56,28 @@ message LatestResponse {
     PageResponse page = 2;
 }
 
+message PageRequestMessage {
+    int32 page = 1;
+    int32 page_len = 2;
+}
+
+message PageResponseMessage {
+    int32 page = 1;
+    int32 page_len = 2;
+    int32 number_of_pages = 3;
+}
+
 message PromotionRequest {
     oneof deal {
         bool daily_deal = 1;
         bool sale_deal = 2;
     }
+    PageRequestMessage page_request = 3;
 }
 
 message PromotionResponse {
     repeated ProductMessage products = 1;
+    PageResponseMessage page_response = 2;
 }
 
 message ProductResponse {
