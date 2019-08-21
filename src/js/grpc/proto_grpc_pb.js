@@ -2,13 +2,13 @@
 
 'use strict';
 var grpc = require('grpc');
-var src_main_proto_proto_pb = require('../proto/proto_pb.js');
+var src_main_proto_proto_pb = require('../../../src/main/proto/proto_pb.js');
 
 function serialize_io_github_benslabbert_trak_grpc_AddProductRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.AddProductRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.AddProductRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_AddProductRequest(buffer_arg) {
@@ -19,7 +19,7 @@ function serialize_io_github_benslabbert_trak_grpc_AddProductResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.AddProductResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.AddProductResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_AddProductResponse(buffer_arg) {
@@ -30,7 +30,7 @@ function serialize_io_github_benslabbert_trak_grpc_BrandRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.BrandRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.BrandRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_BrandRequest(buffer_arg) {
@@ -41,7 +41,7 @@ function serialize_io_github_benslabbert_trak_grpc_BrandResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.BrandResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.BrandResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_BrandResponse(buffer_arg) {
@@ -52,7 +52,7 @@ function serialize_io_github_benslabbert_trak_grpc_CategoryRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.CategoryRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.CategoryRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_CategoryRequest(buffer_arg) {
@@ -63,7 +63,7 @@ function serialize_io_github_benslabbert_trak_grpc_Empty(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.Empty)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.Empty');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_Empty(buffer_arg) {
@@ -74,7 +74,7 @@ function serialize_io_github_benslabbert_trak_grpc_LatestResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.LatestResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.LatestResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_LatestResponse(buffer_arg) {
@@ -85,7 +85,7 @@ function serialize_io_github_benslabbert_trak_grpc_ProductRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.ProductRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.ProductRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_ProductRequest(buffer_arg) {
@@ -96,7 +96,7 @@ function serialize_io_github_benslabbert_trak_grpc_ProductResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.ProductResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.ProductResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_ProductResponse(buffer_arg) {
@@ -107,7 +107,7 @@ function serialize_io_github_benslabbert_trak_grpc_PromotionRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.PromotionRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.PromotionRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_PromotionRequest(buffer_arg) {
@@ -118,7 +118,7 @@ function serialize_io_github_benslabbert_trak_grpc_PromotionResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.PromotionResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.PromotionResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_PromotionResponse(buffer_arg) {
@@ -129,7 +129,7 @@ function serialize_io_github_benslabbert_trak_grpc_SearchRequest(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.SearchRequest)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.SearchRequest');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_SearchRequest(buffer_arg) {
@@ -140,7 +140,7 @@ function serialize_io_github_benslabbert_trak_grpc_SearchResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.SearchResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.SearchResponse');
   }
-  return new Buffer(arg.serializeBinary());
+  return Buffer.from(arg.serializeBinary());
 }
 
 function deserialize_io_github_benslabbert_trak_grpc_SearchResponse(buffer_arg) {

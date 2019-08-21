@@ -64,7 +64,7 @@ message PageRequestMessage {
 message PromotionRequest {
     oneof deal {
         bool daily_deal = 1;
-        bool sale_deal = 2;
+        bool all_deal = 2;
     }
     PageRequestMessage page_request = 3;
 }
@@ -72,6 +72,14 @@ message PromotionRequest {
 message PromotionResponse {
     repeated ProductMessage products = 1;
     PageResponse page_response = 2;
+    PromotionMessage promotion = 3;
+}
+
+message PromotionMessage {
+    int64 id = 1;
+    string name = 2;
+    int64 promotion_id = 3;
+    int64 created = 4;
 }
 
 message ProductResponse {

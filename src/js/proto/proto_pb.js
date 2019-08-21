@@ -23,11 +23,13 @@ goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataMessage', null
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.Empty', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.LatestResponse', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageRequestMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductRequest', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ProductStatsResponse', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PromotionMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PromotionRequest', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PromotionResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.SearchRequest', null, global);
@@ -300,21 +302,21 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.serializeBinaryToWriter =
 
 /**
  * repeated string labels = 1;
- * @return {!Array.<string>}
+ * @return {!Array<string>}
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.getLabelsList = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.getRepeatedField(this, 1));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
-/** @param {!Array.<string>} value */
+/** @param {!Array<string>} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.setLabelsList = function(value) {
   jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
- * @param {!string} value
+ * @param {string} value
  * @param {number=} opt_index
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.addLabels = function(value, opt_index) {
@@ -329,15 +331,15 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.clearLabelsList
 
 /**
  * repeated ChartDataSetMessage data_sets = 2;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.getDataSetsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage, 2));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.setDataSetsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
@@ -485,7 +487,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.deserializeBinaryFromR
       msg.setPointHighlightStroke(value);
       break;
     case 8:
-      var value = /** @type {!Array.<number>} */ (reader.readPackedInt64());
+      var value = /** @type {!Array<number>} */ (reader.readPackedInt64());
       msg.setDataList(value);
       break;
     default:
@@ -587,7 +589,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getLabel = f
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setLabel = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -602,7 +604,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getFillColor
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setFillColor = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -617,7 +619,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getStrokeCol
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setStrokeColor = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -632,7 +634,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getPointColo
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setPointColor = function(value) {
-  jspb.Message.setField(this, 4, value);
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -647,7 +649,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getPointStro
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setPointStrokeColor = function(value) {
-  jspb.Message.setField(this, 5, value);
+  jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -662,7 +664,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getPointHigh
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setPointHighlightFill = function(value) {
-  jspb.Message.setField(this, 6, value);
+  jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -677,27 +679,27 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getPointHigh
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setPointHighlightStroke = function(value) {
-  jspb.Message.setField(this, 7, value);
+  jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
  * repeated int64 data = 8;
- * @return {!Array.<number>}
+ * @return {!Array<number>}
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.getDataList = function() {
-  return /** @type {!Array.<number>} */ (jspb.Message.getRepeatedField(this, 8));
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 8));
 };
 
 
-/** @param {!Array.<number>} value */
+/** @param {!Array<number>} value */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.setDataList = function(value) {
   jspb.Message.setField(this, 8, value || []);
 };
 
 
 /**
- * @param {!number} value
+ * @param {number} value
  * @param {number=} opt_index
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.addData = function(value, opt_index) {
@@ -860,7 +862,7 @@ proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.getId = function() 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.setId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -875,7 +877,7 @@ proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.getName = function(
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.setName = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1029,7 +1031,7 @@ proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.getId = function
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.setId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1044,7 +1046,7 @@ proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.getName = functi
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.setName = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1270,7 +1272,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getName = functio
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setName = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1285,7 +1287,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getProductUrl = f
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setProductUrl = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1300,7 +1302,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getPrice = functi
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setPrice = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -1315,7 +1317,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getImageUrl = fun
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setImageUrl = function(value) {
-  jspb.Message.setField(this, 4, value);
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -1330,7 +1332,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getId = function(
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setId = function(value) {
-  jspb.Message.setField(this, 5, value);
+  jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
@@ -1357,7 +1359,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.clearBrand = func
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.hasBrand = function() {
   return jspb.Message.getField(this, 6) != null;
@@ -1366,15 +1368,15 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.hasBrand = functi
 
 /**
  * repeated CategoryMessage categories = 7;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getCategoriesList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.CategoryMessage, 7));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} value */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setCategoriesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 7, value);
 };
@@ -1593,7 +1595,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getCurrentPageNumbe
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setCurrentPageNumber = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1608,7 +1610,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getLastPageNumber =
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setLastPageNumber = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -1623,7 +1625,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getTotalItems = fun
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setTotalItems = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -1638,7 +1640,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getPageSize = funct
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setPageSize = function(value) {
-  jspb.Message.setField(this, 4, value);
+  jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -1655,7 +1657,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getIsLastPage = fun
 
 /** @param {boolean} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setIsLastPage = function(value) {
-  jspb.Message.setField(this, 5, value);
+  jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -1672,7 +1674,7 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.getIsFirstPage = fu
 
 /** @param {boolean} value */
 proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.setIsFirstPage = function(value) {
-  jspb.Message.setField(this, 6, value);
+  jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
@@ -1829,15 +1831,15 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.serializeBinaryToWriter = f
 
 /**
  * repeated ProductMessage products = 1;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.getProductsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
 proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.setProductsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
@@ -1881,10 +1883,179 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.clearPage = funct
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.hasPage = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.PageRequestMessage, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.io.github.benslabbert.trak.grpc.PageRequestMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.PageRequestMessage';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.toObject = function(opt_includeInstance) {
+  return proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    page: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    pageLen: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
+  return proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPage(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setPageLen(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPage();
+  if (f !== 0) {
+    writer.writeInt32(
+      1,
+      f
+    );
+  }
+  f = message.getPageLen();
+  if (f !== 0) {
+    writer.writeInt32(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int32 page = 1;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.getPage = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.setPage = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional int32 page_len = 2;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.getPageLen = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.setPageLen = function(value) {
+  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -1922,7 +2093,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_ = [[1,2]];
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.DealCase = {
   DEAL_NOT_SET: 0,
   DAILY_DEAL: 1,
-  SALE_DEAL: 2
+  ALL_DEAL: 2
 };
 
 /**
@@ -1962,7 +2133,8 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.toObject = func
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     dailyDeal: jspb.Message.getFieldWithDefault(msg, 1, false),
-    saleDeal: jspb.Message.getFieldWithDefault(msg, 2, false)
+    allDeal: jspb.Message.getFieldWithDefault(msg, 2, false),
+    pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2005,7 +2177,12 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.deserializeBinaryFromRead
       break;
     case 2:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setSaleDeal(value);
+      msg.setAllDeal(value);
+      break;
+    case 3:
+      var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
+      msg.setPageRequest(value);
       break;
     default:
       reader.skipField();
@@ -2050,6 +2227,14 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.serializeBinaryToWriter =
       f
     );
   }
+  f = message.getPageRequest();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -2077,7 +2262,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearDailyDeal 
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasDailyDeal = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -2085,33 +2270,63 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasDailyDeal = 
 
 
 /**
- * optional bool sale_deal = 2;
+ * optional bool all_deal = 2;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getSaleDeal = function() {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getAllDeal = function() {
   return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
 };
 
 
 /** @param {boolean} value */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.setSaleDeal = function(value) {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.setAllDeal = function(value) {
   jspb.Message.setOneofField(this, 2, proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_[0], value);
 };
 
 
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearSaleDeal = function() {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearAllDeal = function() {
   jspb.Message.setOneofField(this, 2, proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_[0], undefined);
 };
 
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasSaleDeal = function() {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasAllDeal = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional PageRequestMessage page_request = 3;
+ * @return {?proto.io.github.benslabbert.trak.grpc.PageRequestMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getPageRequest = function() {
+  return /** @type{?proto.io.github.benslabbert.trak.grpc.PageRequestMessage} */ (
+    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 3));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.PageRequestMessage|undefined} value */
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.setPageRequest = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearPageRequest = function() {
+  this.setPageRequest(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasPageRequest = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -2170,7 +2385,9 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.toObject = fun
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     productsList: jspb.Message.toObjectList(msg.getProductsList(),
-    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance)
+    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
+    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f),
+    promotion: (f = msg.getPromotion()) && proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2212,6 +2429,16 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.deserializeBinaryFromRea
       reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
       msg.addProducts(value);
       break;
+    case 2:
+      var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
+      msg.setPageResponse(value);
+      break;
+    case 3:
+      var value = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader);
+      msg.setPromotion(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -2249,20 +2476,36 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.serializeBinaryToWriter 
       proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
+  f = message.getPageResponse();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
+    );
+  }
+  f = message.getPromotion();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter
+    );
+  }
 };
 
 
 /**
  * repeated ProductMessage products = 1;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getProductsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.setProductsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
@@ -2280,6 +2523,289 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.addProducts = 
 
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearProductsList = function() {
   this.setProductsList([]);
+};
+
+
+/**
+ * optional PageResponse page_response = 2;
+ * @return {?proto.io.github.benslabbert.trak.grpc.PageResponse}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getPageResponse = function() {
+  return /** @type{?proto.io.github.benslabbert.trak.grpc.PageResponse} */ (
+    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.PageResponse|undefined} value */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.setPageResponse = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearPageResponse = function() {
+  this.setPageResponse(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.hasPageResponse = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional PromotionMessage promotion = 3;
+ * @return {?proto.io.github.benslabbert.trak.grpc.PromotionMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getPromotion = function() {
+  return /** @type{?proto.io.github.benslabbert.trak.grpc.PromotionMessage} */ (
+    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PromotionMessage, 3));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.PromotionMessage|undefined} value */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.setPromotion = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearPromotion = function() {
+  this.setPromotion(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.hasPromotion = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.PromotionMessage, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.io.github.benslabbert.trak.grpc.PromotionMessage.displayName = 'proto.io.github.benslabbert.trak.grpc.PromotionMessage';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.toObject = function(opt_includeInstance) {
+  return proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    promotionId: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    created: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.PromotionMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
+  return proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.PromotionMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setId(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setPromotionId(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setCreated(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getId();
+  if (f !== 0) {
+    writer.writeInt64(
+      1,
+      f
+    );
+  }
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getPromotionId();
+  if (f !== 0) {
+    writer.writeInt64(
+      3,
+      f
+    );
+  }
+  f = message.getCreated();
+  if (f !== 0) {
+    writer.writeInt64(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional int64 id = 1;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.getId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.setId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional string name = 2;
+ * @return {string}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional int64 promotion_id = 3;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.getPromotionId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.setPromotionId = function(value) {
+  jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int64 created = 4;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.getCreated = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.setCreated = function(value) {
+  jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
@@ -2449,7 +2975,7 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.clearProduct = f
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.hasProduct = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -2479,7 +3005,7 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.clearStats = fun
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.hasStats = function() {
   return jspb.Message.getField(this, 2) != null;
@@ -2624,7 +3150,7 @@ proto.io.github.benslabbert.trak.grpc.ProductRequest.prototype.getProductId = fu
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductRequest.prototype.setProductId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -2804,7 +3330,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMinPrice
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMinPrice = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -2819,7 +3345,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMaxPrice
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMaxPrice = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -2834,7 +3360,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getMeanPric
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMeanPrice = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
@@ -2861,7 +3387,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.clearChartD
 
 /**
  * Returns whether this field is set.
- * @return {!boolean}
+ * @return {boolean}
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.hasChartData = function() {
   return jspb.Message.getField(this, 4) != null;
@@ -3007,15 +3533,15 @@ proto.io.github.benslabbert.trak.grpc.SearchResponse.serializeBinaryToWriter = f
 
 /**
  * repeated SearchResult results = 1;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.SearchResult>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.SearchResult>}
  */
 proto.io.github.benslabbert.trak.grpc.SearchResponse.prototype.getResultsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.SearchResult>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.SearchResult>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.SearchResult, 1));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.SearchResult>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.SearchResult>} value */
 proto.io.github.benslabbert.trak.grpc.SearchResponse.prototype.setResultsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
@@ -3198,7 +3724,7 @@ proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.getId = function() 
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.setId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3213,7 +3739,7 @@ proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.getName = function(
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.setName = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -3228,7 +3754,7 @@ proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.getScore = function
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.setScore = function(value) {
-  jspb.Message.setField(this, 3, value);
+  jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
@@ -3370,7 +3896,7 @@ proto.io.github.benslabbert.trak.grpc.SearchRequest.prototype.getSearch = functi
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.SearchRequest.prototype.setSearch = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3512,7 +4038,7 @@ proto.io.github.benslabbert.trak.grpc.BrandRequest.prototype.getBrandId = functi
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.BrandRequest.prototype.setBrandId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -3654,7 +4180,7 @@ proto.io.github.benslabbert.trak.grpc.CategoryRequest.prototype.getCategoryId = 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.CategoryRequest.prototype.setCategoryId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -3830,7 +4356,7 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.getCategoryId =
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.setCategoryId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -3845,21 +4371,21 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.getName = funct
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.setName = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
  * repeated ProductMessage products = 3;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.getProductsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
 proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.setProductsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
@@ -4052,7 +4578,7 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.getBrandId = funct
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.setBrandId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -4067,21 +4593,21 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.getName = function
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.setName = function(value) {
-  jspb.Message.setField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
  * repeated ProductMessage products = 3;
- * @return {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>}
  */
 proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.getProductsList = function() {
-  return /** @type{!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
 };
 
 
-/** @param {!Array.<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} value */
 proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.setProductsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
@@ -4240,7 +4766,7 @@ proto.io.github.benslabbert.trak.grpc.AddProductRequest.prototype.getPlId = func
 
 /** @param {string} value */
 proto.io.github.benslabbert.trak.grpc.AddProductRequest.prototype.setPlId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -4382,7 +4908,7 @@ proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.getProductId 
 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.setProductId = function(value) {
-  jspb.Message.setField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
