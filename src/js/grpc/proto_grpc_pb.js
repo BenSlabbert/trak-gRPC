@@ -70,6 +70,28 @@ function deserialize_io_github_benslabbert_trak_grpc_Empty(buffer_arg) {
   return src_main_proto_proto_pb.Empty.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_io_github_benslabbert_trak_grpc_GetAllPromotionsRequest(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.GetAllPromotionsRequest)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.GetAllPromotionsRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_GetAllPromotionsRequest(buffer_arg) {
+  return src_main_proto_proto_pb.GetAllPromotionsRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_io_github_benslabbert_trak_grpc_GetAllPromotionsResponse(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.GetAllPromotionsResponse)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.GetAllPromotionsResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_GetAllPromotionsResponse(buffer_arg) {
+  return src_main_proto_proto_pb.GetAllPromotionsResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_io_github_benslabbert_trak_grpc_LatestResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.LatestResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.LatestResponse');
@@ -201,8 +223,8 @@ var LatestServiceService = exports.LatestServiceService = {
 
 exports.LatestServiceClient = grpc.makeGenericClientConstructor(LatestServiceService);
 var PromotionServiceService = exports.PromotionServiceService = {
-  promotions: {
-    path: '/io.github.benslabbert.trak.grpc.PromotionService/promotions',
+  getPromotion: {
+    path: '/io.github.benslabbert.trak.grpc.PromotionService/getPromotion',
     requestStream: false,
     responseStream: false,
     requestType: src_main_proto_proto_pb.PromotionRequest,
@@ -211,6 +233,17 @@ var PromotionServiceService = exports.PromotionServiceService = {
     requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_PromotionRequest,
     responseSerialize: serialize_io_github_benslabbert_trak_grpc_PromotionResponse,
     responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_PromotionResponse,
+  },
+  getAllPromotions: {
+    path: '/io.github.benslabbert.trak.grpc.PromotionService/getAllPromotions',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.GetAllPromotionsRequest,
+    responseType: src_main_proto_proto_pb.GetAllPromotionsResponse,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_GetAllPromotionsRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_GetAllPromotionsRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_GetAllPromotionsResponse,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_GetAllPromotionsResponse,
   },
 };
 

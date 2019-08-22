@@ -64,7 +64,7 @@ message PageRequestMessage {
 message PromotionRequest {
     oneof deal {
         bool daily_deal = 1;
-        bool all_deal = 2;
+        int64 promotion_id = 2;
     }
     PageRequestMessage page_request = 3;
 }
@@ -72,7 +72,6 @@ message PromotionRequest {
 message PromotionResponse {
     repeated ProductMessage products = 1;
     PageResponse page_response = 2;
-    PromotionMessage promotion = 3;
 }
 
 message PromotionMessage {
@@ -140,6 +139,15 @@ message AddProductResponse {
     int64 product_id = 1;
 }
 
+message GetAllPromotionsRequest {
+    PageRequestMessage page_request = 1;
+}
+
+message GetAllPromotionsResponse {
+    repeated PromotionMessage promotions = 1;
+    PageResponse page_response = 2;
+}
+
 service SearchService {
     rpc productSearch (SearchRequest) returns (SearchResponse);
     rpc brandSearch (SearchRequest) returns (SearchResponse);
@@ -151,7 +159,8 @@ service LatestService {
 }
 
 service PromotionService {
-    rpc promotions (PromotionRequest) returns (PromotionResponse);
+    rpc getPromotion (PromotionRequest) returns (PromotionResponse);
+    rpc getAllPromotions (GetAllPromotionsRequest) returns (GetAllPromotionsResponse);
 }
 
 service ProductService {

@@ -22,6 +22,8 @@ goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.CategoryResponse', null
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.Empty', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.LatestResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageRequestMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageResponse', null, global);
@@ -2093,7 +2095,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_ = [[1,2]];
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.DealCase = {
   DEAL_NOT_SET: 0,
   DAILY_DEAL: 1,
-  ALL_DEAL: 2
+  PROMOTION_ID: 2
 };
 
 /**
@@ -2133,7 +2135,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.toObject = func
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     dailyDeal: jspb.Message.getFieldWithDefault(msg, 1, false),
-    allDeal: jspb.Message.getFieldWithDefault(msg, 2, false),
+    promotionId: jspb.Message.getFieldWithDefault(msg, 2, 0),
     pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
   };
 
@@ -2176,8 +2178,8 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.deserializeBinaryFromRead
       msg.setDailyDeal(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAllDeal(value);
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setPromotionId(value);
       break;
     case 3:
       var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
@@ -2220,9 +2222,9 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.serializeBinaryToWriter =
       f
     );
   }
-  f = /** @type {boolean} */ (jspb.Message.getField(message, 2));
+  f = /** @type {number} */ (jspb.Message.getField(message, 2));
   if (f != null) {
-    writer.writeBool(
+    writer.writeInt64(
       2,
       f
     );
@@ -2270,23 +2272,21 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasDailyDeal = 
 
 
 /**
- * optional bool all_deal = 2;
- * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
- * You should avoid comparisons like {@code val === true/false} in those cases.
- * @return {boolean}
+ * optional int64 promotion_id = 2;
+ * @return {number}
  */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getAllDeal = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getPromotionId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
-/** @param {boolean} value */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.setAllDeal = function(value) {
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.setPromotionId = function(value) {
   jspb.Message.setOneofField(this, 2, proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_[0], value);
 };
 
 
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearAllDeal = function() {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearPromotionId = function() {
   jspb.Message.setOneofField(this, 2, proto.io.github.benslabbert.trak.grpc.PromotionRequest.oneofGroups_[0], undefined);
 };
 
@@ -2295,7 +2295,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.clearAllDeal = 
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasAllDeal = function() {
+proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasPromotionId = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -2386,8 +2386,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject = function(incl
   var f, obj = {
     productsList: jspb.Message.toObjectList(msg.getProductsList(),
     proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
-    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f),
-    promotion: (f = msg.getPromotion()) && proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject(includeInstance, f)
+    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2434,11 +2433,6 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.deserializeBinaryFromRea
       reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
       msg.setPageResponse(value);
       break;
-    case 3:
-      var value = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader);
-      msg.setPromotion(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -2482,14 +2476,6 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.serializeBinaryToWriter 
       2,
       f,
       proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
-    );
-  }
-  f = message.getPromotion();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter
     );
   }
 };
@@ -2553,36 +2539,6 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearPageRespo
  */
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.hasPageResponse = function() {
   return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional PromotionMessage promotion = 3;
- * @return {?proto.io.github.benslabbert.trak.grpc.PromotionMessage}
- */
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getPromotion = function() {
-  return /** @type{?proto.io.github.benslabbert.trak.grpc.PromotionMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PromotionMessage, 3));
-};
-
-
-/** @param {?proto.io.github.benslabbert.trak.grpc.PromotionMessage|undefined} value */
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.setPromotion = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearPromotion = function() {
-  this.setPromotion(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.hasPromotion = function() {
-  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -4909,6 +4865,377 @@ proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.getProductId 
 /** @param {number} value */
 proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.setProductId = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.displayName = 'proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest;
+  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
+      msg.setPageRequest(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPageRequest();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional PageRequestMessage page_request = 1;
+ * @return {?proto.io.github.benslabbert.trak.grpc.PageRequestMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.getPageRequest = function() {
+  return /** @type{?proto.io.github.benslabbert.trak.grpc.PageRequestMessage} */ (
+    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 1));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.PageRequestMessage|undefined} value */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.setPageRequest = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.clearPageRequest = function() {
+  this.setPageRequest(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.hasPageRequest = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.repeatedFields_, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.displayName = 'proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.repeatedFields_ = [1];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    promotionsList: jspb.Message.toObjectList(msg.getPromotionsList(),
+    proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject, includeInstance),
+    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse;
+  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader);
+      msg.addPromotions(value);
+      break;
+    case 2:
+      var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
+      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
+      msg.setPageResponse(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPromotionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      1,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter
+    );
+  }
+  f = message.getPageResponse();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * repeated PromotionMessage promotions = 1;
+ * @return {!Array<!proto.io.github.benslabbert.trak.grpc.PromotionMessage>}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.getPromotionsList = function() {
+  return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.PromotionMessage>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.PromotionMessage, 1));
+};
+
+
+/** @param {!Array<!proto.io.github.benslabbert.trak.grpc.PromotionMessage>} value */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.setPromotionsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
+};
+
+
+/**
+ * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.io.github.benslabbert.trak.grpc.PromotionMessage}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.addPromotions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.io.github.benslabbert.trak.grpc.PromotionMessage, opt_index);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.clearPromotionsList = function() {
+  this.setPromotionsList([]);
+};
+
+
+/**
+ * optional PageResponse page_response = 2;
+ * @return {?proto.io.github.benslabbert.trak.grpc.PageResponse}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.getPageResponse = function() {
+  return /** @type{?proto.io.github.benslabbert.trak.grpc.PageResponse} */ (
+    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
+};
+
+
+/** @param {?proto.io.github.benslabbert.trak.grpc.PageResponse|undefined} value */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.setPageResponse = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.clearPageResponse = function() {
+  this.setPageResponse(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.hasPageResponse = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
