@@ -92,6 +92,17 @@ function deserialize_io_github_benslabbert_trak_grpc_GetAllPromotionsResponse(bu
   return src_main_proto_proto_pb.GetAllPromotionsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_io_github_benslabbert_trak_grpc_IngestRequest(arg) {
+  if (!(arg instanceof src_main_proto_proto_pb.IngestRequest)) {
+    throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.IngestRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_io_github_benslabbert_trak_grpc_IngestRequest(buffer_arg) {
+  return src_main_proto_proto_pb.IngestRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_io_github_benslabbert_trak_grpc_LatestResponse(arg) {
   if (!(arg instanceof src_main_proto_proto_pb.LatestResponse)) {
     throw new Error('Expected argument of type io.github.benslabbert.trak.grpc.LatestResponse');
@@ -171,17 +182,6 @@ function deserialize_io_github_benslabbert_trak_grpc_SearchResponse(buffer_arg) 
 
 
 var SearchServiceService = exports.SearchServiceService = {
-  productSearch: {
-    path: '/io.github.benslabbert.trak.grpc.SearchService/productSearch',
-    requestStream: false,
-    responseStream: false,
-    requestType: src_main_proto_proto_pb.SearchRequest,
-    responseType: src_main_proto_proto_pb.SearchResponse,
-    requestSerialize: serialize_io_github_benslabbert_trak_grpc_SearchRequest,
-    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchRequest,
-    responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
-    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
-  },
   brandSearch: {
     path: '/io.github.benslabbert.trak.grpc.SearchService/brandSearch',
     requestStream: false,
@@ -193,6 +193,39 @@ var SearchServiceService = exports.SearchServiceService = {
     responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
     responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
   },
+  brandIngest: {
+    path: '/io.github.benslabbert.trak.grpc.SearchService/brandIngest',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.IngestRequest,
+    responseType: src_main_proto_proto_pb.Empty,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_Empty,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_Empty,
+  },
+  productSearch: {
+    path: '/io.github.benslabbert.trak.grpc.SearchService/productSearch',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.SearchRequest,
+    responseType: src_main_proto_proto_pb.SearchResponse,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_SearchRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
+  },
+  productIngest: {
+    path: '/io.github.benslabbert.trak.grpc.SearchService/productIngest',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.IngestRequest,
+    responseType: src_main_proto_proto_pb.Empty,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_Empty,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_Empty,
+  },
   categorySearch: {
     path: '/io.github.benslabbert.trak.grpc.SearchService/categorySearch',
     requestStream: false,
@@ -203,6 +236,17 @@ var SearchServiceService = exports.SearchServiceService = {
     requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchRequest,
     responseSerialize: serialize_io_github_benslabbert_trak_grpc_SearchResponse,
     responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_SearchResponse,
+  },
+  categoryIngest: {
+    path: '/io.github.benslabbert.trak.grpc.SearchService/categoryIngest',
+    requestStream: false,
+    responseStream: false,
+    requestType: src_main_proto_proto_pb.IngestRequest,
+    responseType: src_main_proto_proto_pb.Empty,
+    requestSerialize: serialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    requestDeserialize: deserialize_io_github_benslabbert_trak_grpc_IngestRequest,
+    responseSerialize: serialize_io_github_benslabbert_trak_grpc_Empty,
+    responseDeserialize: deserialize_io_github_benslabbert_trak_grpc_Empty,
   },
 };
 

@@ -24,6 +24,7 @@ goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage', n
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.Empty', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse', null, global);
+goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.IngestRequest', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.LatestResponse', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageRequestMessage', null, global);
 goog.exportSymbol('proto.io.github.benslabbert.trak.grpc.PageResponse', null, global);
@@ -58,40 +59,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.Empty.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.Empty.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.Empty} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.Empty.toObject = function(includeInstance, msg) {
-  var f, obj = {
-
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.Empty.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.Empty.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.Empty} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.Empty.toObject = function(includeInstance, msg) {
+    var f, obj = {
+
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -121,9 +122,9 @@ proto.io.github.benslabbert.trak.grpc.Empty.deserializeBinaryFromReader = functi
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    default:
-      reader.skipField();
-      break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -181,42 +182,42 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.repeatedFields_ = [1,2];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ChartDataMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    labelsList: jspb.Message.getRepeatedField(msg, 1),
-    dataSetsList: jspb.Message.toObjectList(msg.getDataSetsList(),
-    proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ChartDataMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      labelsList: jspb.Message.getRepeatedField(msg, 1),
+      dataSetsList: jspb.Message.toObjectList(msg.getDataSetsList(),
+          proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -246,18 +247,18 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.deserializeBinaryFromRead
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addLabels(value);
-      break;
-    case 2:
-      var value = new proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.deserializeBinaryFromReader);
-      msg.addDataSets(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.addLabels(value);
+        break;
+      case 2:
+        var value = new proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.deserializeBinaryFromReader);
+        msg.addDataSets(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -287,16 +288,16 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.serializeBinaryToWriter =
   f = message.getLabelsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getDataSetsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      2,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.serializeBinaryToWriter
+        2,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.serializeBinaryToWriter
     );
   }
 };
@@ -337,7 +338,7 @@ proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.clearLabelsList
  */
 proto.io.github.benslabbert.trak.grpc.ChartDataMessage.prototype.getDataSetsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage, 2));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage, 2));
 };
 
 
@@ -390,47 +391,47 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.repeatedFields_ = [8];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    fillColor: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    strokeColor: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    pointColor: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    pointStrokeColor: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    pointHighlightFill: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    pointHighlightStroke: jspb.Message.getFieldWithDefault(msg, 7, ""),
-    dataList: jspb.Message.getRepeatedField(msg, 8)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      fillColor: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      strokeColor: jspb.Message.getFieldWithDefault(msg, 3, ""),
+      pointColor: jspb.Message.getFieldWithDefault(msg, 4, ""),
+      pointStrokeColor: jspb.Message.getFieldWithDefault(msg, 5, ""),
+      pointHighlightFill: jspb.Message.getFieldWithDefault(msg, 6, ""),
+      pointHighlightStroke: jspb.Message.getFieldWithDefault(msg, 7, ""),
+      dataList: jspb.Message.getRepeatedField(msg, 8)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -460,41 +461,41 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.deserializeBinaryFromR
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLabel(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setFillColor(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStrokeColor(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPointColor(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPointStrokeColor(value);
-      break;
-    case 6:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPointHighlightFill(value);
-      break;
-    case 7:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPointHighlightStroke(value);
-      break;
-    case 8:
-      var value = /** @type {!Array<number>} */ (reader.readPackedInt64());
-      msg.setDataList(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setLabel(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setFillColor(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setStrokeColor(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPointColor(value);
+        break;
+      case 5:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPointStrokeColor(value);
+        break;
+      case 6:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPointHighlightFill(value);
+        break;
+      case 7:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPointHighlightStroke(value);
+        break;
+      case 8:
+        var value = /** @type {!Array<number>} */ (reader.readPackedInt64());
+        msg.setDataList(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -524,57 +525,57 @@ proto.io.github.benslabbert.trak.grpc.ChartDataSetMessage.serializeBinaryToWrite
   f = message.getLabel();
   if (f.length > 0) {
     writer.writeString(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getFillColor();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getStrokeColor();
   if (f.length > 0) {
     writer.writeString(
-      3,
-      f
+        3,
+        f
     );
   }
   f = message.getPointColor();
   if (f.length > 0) {
     writer.writeString(
-      4,
-      f
+        4,
+        f
     );
   }
   f = message.getPointStrokeColor();
   if (f.length > 0) {
     writer.writeString(
-      5,
-      f
+        5,
+        f
     );
   }
   f = message.getPointHighlightFill();
   if (f.length > 0) {
     writer.writeString(
-      6,
-      f
+        6,
+        f
     );
   }
   f = message.getPointHighlightStroke();
   if (f.length > 0) {
     writer.writeString(
-      7,
-      f
+        7,
+        f
     );
   }
   f = message.getDataList();
   if (f.length > 0) {
     writer.writePackedInt64(
-      8,
-      f
+        8,
+        f
     );
   }
 };
@@ -735,41 +736,41 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.BrandMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, "")
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.BrandMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      name: jspb.Message.getFieldWithDefault(msg, 2, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -799,17 +800,17 @@ proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -839,15 +840,15 @@ proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter = fun
   f = message.getId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
 };
@@ -904,41 +905,41 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, "")
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.CategoryMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      name: jspb.Message.getFieldWithDefault(msg, 2, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -968,17 +969,17 @@ proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReade
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -1008,15 +1009,15 @@ proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter = 
   f = message.getId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
 };
@@ -1080,47 +1081,47 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.repeatedFields_ = [7];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ProductMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    productUrl: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    price: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    imageUrl: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    id: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    brand: (f = msg.getBrand()) && proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(includeInstance, f),
-    categoriesList: jspb.Message.toObjectList(msg.getCategoriesList(),
-    proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ProductMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      productUrl: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      price: jspb.Message.getFieldWithDefault(msg, 3, ""),
+      imageUrl: jspb.Message.getFieldWithDefault(msg, 4, ""),
+      id: jspb.Message.getFieldWithDefault(msg, 5, 0),
+      brand: (f = msg.getBrand()) && proto.io.github.benslabbert.trak.grpc.BrandMessage.toObject(includeInstance, f),
+      categoriesList: jspb.Message.toObjectList(msg.getCategoriesList(),
+          proto.io.github.benslabbert.trak.grpc.CategoryMessage.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -1150,39 +1151,39 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setProductUrl(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPrice(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setImageUrl(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setId(value);
-      break;
-    case 6:
-      var value = new proto.io.github.benslabbert.trak.grpc.BrandMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader);
-      msg.setBrand(value);
-      break;
-    case 7:
-      var value = new proto.io.github.benslabbert.trak.grpc.CategoryMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReader);
-      msg.addCategories(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setProductUrl(value);
+        break;
+      case 3:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPrice(value);
+        break;
+      case 4:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setImageUrl(value);
+        break;
+      case 5:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setId(value);
+        break;
+      case 6:
+        var value = new proto.io.github.benslabbert.trak.grpc.BrandMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.BrandMessage.deserializeBinaryFromReader);
+        msg.setBrand(value);
+        break;
+      case 7:
+        var value = new proto.io.github.benslabbert.trak.grpc.CategoryMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.CategoryMessage.deserializeBinaryFromReader);
+        msg.addCategories(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -1212,52 +1213,52 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter = f
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getProductUrl();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getPrice();
   if (f.length > 0) {
     writer.writeString(
-      3,
-      f
+        3,
+        f
     );
   }
   f = message.getImageUrl();
   if (f.length > 0) {
     writer.writeString(
-      4,
-      f
+        4,
+        f
     );
   }
   f = message.getId();
   if (f !== 0) {
     writer.writeInt64(
-      5,
-      f
+        5,
+        f
     );
   }
   f = message.getBrand();
   if (f != null) {
     writer.writeMessage(
-      6,
-      f,
-      proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter
+        6,
+        f,
+        proto.io.github.benslabbert.trak.grpc.BrandMessage.serializeBinaryToWriter
     );
   }
   f = message.getCategoriesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      7,
-      f,
-      proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter
+        7,
+        f,
+        proto.io.github.benslabbert.trak.grpc.CategoryMessage.serializeBinaryToWriter
     );
   }
 };
@@ -1344,7 +1345,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.setId = function(
  */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getBrand = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.BrandMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.BrandMessage, 6));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.BrandMessage, 6));
 };
 
 
@@ -1374,7 +1375,7 @@ proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.hasBrand = functi
  */
 proto.io.github.benslabbert.trak.grpc.ProductMessage.prototype.getCategoriesList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.CategoryMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.CategoryMessage, 7));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.CategoryMessage, 7));
 };
 
 
@@ -1420,45 +1421,45 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.PageResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PageResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    currentPageNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    lastPageNumber: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    totalItems: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    pageSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    isLastPage: jspb.Message.getFieldWithDefault(msg, 5, false),
-    isFirstPage: jspb.Message.getFieldWithDefault(msg, 6, false)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.PageResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.PageResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.PageResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      currentPageNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      lastPageNumber: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      totalItems: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      pageSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
+      isLastPage: jspb.Message.getFieldWithDefault(msg, 5, false),
+      isFirstPage: jspb.Message.getFieldWithDefault(msg, 6, false)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -1488,33 +1489,33 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setCurrentPageNumber(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setLastPageNumber(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setTotalItems(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPageSize(value);
-      break;
-    case 5:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsLastPage(value);
-      break;
-    case 6:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setIsFirstPage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setCurrentPageNumber(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setLastPageNumber(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setTotalItems(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setPageSize(value);
+        break;
+      case 5:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setIsLastPage(value);
+        break;
+      case 6:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setIsFirstPage(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -1544,43 +1545,43 @@ proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter = fun
   f = message.getCurrentPageNumber();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getLastPageNumber();
   if (f !== 0) {
     writer.writeInt64(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getTotalItems();
   if (f !== 0) {
     writer.writeInt64(
-      3,
-      f
+        3,
+        f
     );
   }
   f = message.getPageSize();
   if (f !== 0) {
     writer.writeInt64(
-      4,
-      f
+        4,
+        f
     );
   }
   f = message.getIsLastPage();
   if (f) {
     writer.writeBool(
-      5,
-      f
+        5,
+        f
     );
   }
   f = message.getIsFirstPage();
   if (f) {
     writer.writeBool(
-      6,
-      f
+        6,
+        f
     );
   }
 };
@@ -1708,42 +1709,42 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.repeatedFields_ = [1];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.LatestResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.LatestResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.LatestResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    productsList: jspb.Message.toObjectList(msg.getProductsList(),
-    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
-    page: (f = msg.getPage()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.LatestResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.LatestResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.LatestResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      productsList: jspb.Message.toObjectList(msg.getProductsList(),
+          proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
+      page: (f = msg.getPage()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -1773,19 +1774,19 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.deserializeBinaryFromReader
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
-      msg.addProducts(value);
-      break;
-    case 2:
-      var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
-      msg.setPage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
+        msg.addProducts(value);
+        break;
+      case 2:
+        var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
+        msg.setPage(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -1815,17 +1816,17 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.serializeBinaryToWriter = f
   f = message.getProductsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
   f = message.getPage();
   if (f != null) {
     writer.writeMessage(
-      2,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
+        2,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
     );
   }
 };
@@ -1837,7 +1838,7 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.serializeBinaryToWriter = f
  */
 proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.getProductsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
 };
 
 
@@ -1868,7 +1869,7 @@ proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.clearProductsList
  */
 proto.io.github.benslabbert.trak.grpc.LatestResponse.prototype.getPage = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.PageResponse} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
 };
 
 
@@ -1913,41 +1914,41 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    page: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    pageLen: jspb.Message.getFieldWithDefault(msg, 2, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.PageRequestMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.PageRequestMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      page: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      pageLen: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -1977,17 +1978,17 @@ proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromRe
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setPage(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setPageLen(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt32());
+        msg.setPage(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt32());
+        msg.setPageLen(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -2017,15 +2018,15 @@ proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
   f = message.getPage();
   if (f !== 0) {
     writer.writeInt32(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getPageLen();
   if (f !== 0) {
     writer.writeInt32(
-      2,
-      f
+        2,
+        f
     );
   }
 };
@@ -2108,42 +2109,42 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getDealCase = f
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.PromotionRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    dailyDeal: jspb.Message.getFieldWithDefault(msg, 1, false),
-    promotionId: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.PromotionRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      dailyDeal: jspb.Message.getFieldWithDefault(msg, 1, false),
+      promotionId: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -2173,22 +2174,22 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.deserializeBinaryFromRead
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setDailyDeal(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPromotionId(value);
-      break;
-    case 3:
-      var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
-      msg.setPageRequest(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {boolean} */ (reader.readBool());
+        msg.setDailyDeal(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setPromotionId(value);
+        break;
+      case 3:
+        var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
+        msg.setPageRequest(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -2218,23 +2219,23 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.serializeBinaryToWriter =
   f = /** @type {boolean} */ (jspb.Message.getField(message, 1));
   if (f != null) {
     writer.writeBool(
-      1,
-      f
+        1,
+        f
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 2));
   if (f != null) {
     writer.writeInt64(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getPageRequest();
   if (f != null) {
     writer.writeMessage(
-      3,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
+        3,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
     );
   }
 };
@@ -2306,7 +2307,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.hasPromotionId 
  */
 proto.io.github.benslabbert.trak.grpc.PromotionRequest.prototype.getPageRequest = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.PageRequestMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 3));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 3));
 };
 
 
@@ -2358,42 +2359,42 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.repeatedFields_ = [1];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.PromotionResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    productsList: jspb.Message.toObjectList(msg.getProductsList(),
-    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
-    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.PromotionResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      productsList: jspb.Message.toObjectList(msg.getProductsList(),
+          proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance),
+      pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -2423,19 +2424,19 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.deserializeBinaryFromRea
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
-      msg.addProducts(value);
-      break;
-    case 2:
-      var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
-      msg.setPageResponse(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
+        msg.addProducts(value);
+        break;
+      case 2:
+        var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
+        msg.setPageResponse(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -2465,17 +2466,17 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.serializeBinaryToWriter 
   f = message.getProductsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
   f = message.getPageResponse();
   if (f != null) {
     writer.writeMessage(
-      2,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
+        2,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
     );
   }
 };
@@ -2487,7 +2488,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.serializeBinaryToWriter 
  */
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getProductsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
 };
 
 
@@ -2518,7 +2519,7 @@ proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.clearProductsL
  */
 proto.io.github.benslabbert.trak.grpc.PromotionResponse.prototype.getPageResponse = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.PageResponse} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
 };
 
 
@@ -2563,43 +2564,43 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    promotionId: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    created: jspb.Message.getFieldWithDefault(msg, 4, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionMessage.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.PromotionMessage} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      promotionId: jspb.Message.getFieldWithDefault(msg, 3, 0),
+      created: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -2629,25 +2630,25 @@ proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromRead
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setPromotionId(value);
-      break;
-    case 4:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setCreated(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setPromotionId(value);
+        break;
+      case 4:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setCreated(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -2677,29 +2678,29 @@ proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter =
   f = message.getId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getPromotionId();
   if (f !== 0) {
     writer.writeInt64(
-      3,
-      f
+        3,
+        f
     );
   }
   f = message.getCreated();
   if (f !== 0) {
     writer.writeInt64(
-      4,
-      f
+        4,
+        f
     );
   }
 };
@@ -2786,41 +2787,41 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ProductResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ProductResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ProductResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    product: (f = msg.getProduct()) && proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject(includeInstance, f),
-    stats: (f = msg.getStats()) && proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ProductResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ProductResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      product: (f = msg.getProduct()) && proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject(includeInstance, f),
+      stats: (f = msg.getStats()) && proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -2850,19 +2851,19 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.deserializeBinaryFromReade
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
-      msg.setProduct(value);
-      break;
-    case 2:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductStatsResponse;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.deserializeBinaryFromReader);
-      msg.setStats(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
+        msg.setProduct(value);
+        break;
+      case 2:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductStatsResponse;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.deserializeBinaryFromReader);
+        msg.setStats(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -2892,17 +2893,17 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.serializeBinaryToWriter = 
   f = message.getProduct();
   if (f != null) {
     writer.writeMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
   f = message.getStats();
   if (f != null) {
     writer.writeMessage(
-      2,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.serializeBinaryToWriter
+        2,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.serializeBinaryToWriter
     );
   }
 };
@@ -2914,7 +2915,7 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.serializeBinaryToWriter = 
  */
 proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.getProduct = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.ProductMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 1));
 };
 
 
@@ -2944,7 +2945,7 @@ proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.hasProduct = fun
  */
 proto.io.github.benslabbert.trak.grpc.ProductResponse.prototype.getStats = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.ProductStatsResponse} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductStatsResponse, 2));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductStatsResponse, 2));
 };
 
 
@@ -2989,40 +2990,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ProductRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ProductRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ProductRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ProductRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    productId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ProductRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ProductRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      productId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3052,13 +3053,13 @@ proto.io.github.benslabbert.trak.grpc.ProductRequest.deserializeBinaryFromReader
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setProductId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setProductId(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3088,8 +3089,8 @@ proto.io.github.benslabbert.trak.grpc.ProductRequest.serializeBinaryToWriter = f
   f = message.getProductId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -3131,43 +3132,43 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.ProductStatsResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    minPrice: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    maxPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    meanPrice: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
-    chartData: (f = msg.getChartData()) && proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.ProductStatsResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      minPrice: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      maxPrice: jspb.Message.getFieldWithDefault(msg, 2, 0),
+      meanPrice: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+      chartData: (f = msg.getChartData()) && proto.io.github.benslabbert.trak.grpc.ChartDataMessage.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3197,26 +3198,26 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.deserializeBinaryFrom
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMinPrice(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMaxPrice(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readDouble());
-      msg.setMeanPrice(value);
-      break;
-    case 4:
-      var value = new proto.io.github.benslabbert.trak.grpc.ChartDataMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ChartDataMessage.deserializeBinaryFromReader);
-      msg.setChartData(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setMinPrice(value);
+        break;
+      case 2:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setMaxPrice(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readDouble());
+        msg.setMeanPrice(value);
+        break;
+      case 4:
+        var value = new proto.io.github.benslabbert.trak.grpc.ChartDataMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ChartDataMessage.deserializeBinaryFromReader);
+        msg.setChartData(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3246,30 +3247,30 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.serializeBinaryToWrit
   f = message.getMinPrice();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getMaxPrice();
   if (f !== 0) {
     writer.writeInt64(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getMeanPrice();
   if (f !== 0.0) {
     writer.writeDouble(
-      3,
-      f
+        3,
+        f
     );
   }
   f = message.getChartData();
   if (f != null) {
     writer.writeMessage(
-      4,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ChartDataMessage.serializeBinaryToWriter
+        4,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ChartDataMessage.serializeBinaryToWriter
     );
   }
 };
@@ -3326,7 +3327,7 @@ proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.setMeanPric
  */
 proto.io.github.benslabbert.trak.grpc.ProductStatsResponse.prototype.getChartData = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.ChartDataMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataMessage, 4));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.ChartDataMessage, 4));
 };
 
 
@@ -3378,41 +3379,41 @@ proto.io.github.benslabbert.trak.grpc.SearchResponse.repeatedFields_ = [1];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.SearchResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.SearchResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.SearchResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.SearchResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    resultsList: jspb.Message.toObjectList(msg.getResultsList(),
-    proto.io.github.benslabbert.trak.grpc.SearchResult.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.SearchResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.SearchResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      resultsList: jspb.Message.toObjectList(msg.getResultsList(),
+          proto.io.github.benslabbert.trak.grpc.SearchResult.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3442,14 +3443,14 @@ proto.io.github.benslabbert.trak.grpc.SearchResponse.deserializeBinaryFromReader
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.SearchResult;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.SearchResult.deserializeBinaryFromReader);
-      msg.addResults(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.SearchResult;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.SearchResult.deserializeBinaryFromReader);
+        msg.addResults(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3479,9 +3480,9 @@ proto.io.github.benslabbert.trak.grpc.SearchResponse.serializeBinaryToWriter = f
   f = message.getResultsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.SearchResult.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.SearchResult.serializeBinaryToWriter
     );
   }
 };
@@ -3493,7 +3494,7 @@ proto.io.github.benslabbert.trak.grpc.SearchResponse.serializeBinaryToWriter = f
  */
 proto.io.github.benslabbert.trak.grpc.SearchResponse.prototype.getResultsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.SearchResult>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.SearchResult, 1));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.SearchResult, 1));
 };
 
 
@@ -3539,42 +3540,42 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.SearchResult.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.SearchResult} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.SearchResult.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    score: +jspb.Message.getFieldWithDefault(msg, 3, 0.0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchResult.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.SearchResult.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.SearchResult} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchResult.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+      name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      score: +jspb.Message.getFieldWithDefault(msg, 3, 0.0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3604,21 +3605,21 @@ proto.io.github.benslabbert.trak.grpc.SearchResult.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readFloat());
-      msg.setScore(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 3:
+        var value = /** @type {number} */ (reader.readFloat());
+        msg.setScore(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3648,22 +3649,22 @@ proto.io.github.benslabbert.trak.grpc.SearchResult.serializeBinaryToWriter = fun
   f = message.getId();
   if (f.length > 0) {
     writer.writeString(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getScore();
   if (f !== 0.0) {
     writer.writeFloat(
-      3,
-      f
+        3,
+        f
     );
   }
 };
@@ -3735,40 +3736,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.SearchRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.SearchRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.SearchRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.SearchRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    search: jspb.Message.getFieldWithDefault(msg, 1, "")
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.SearchRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.SearchRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.SearchRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      search: jspb.Message.getFieldWithDefault(msg, 1, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3798,13 +3799,13 @@ proto.io.github.benslabbert.trak.grpc.SearchRequest.deserializeBinaryFromReader 
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSearch(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setSearch(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3834,8 +3835,8 @@ proto.io.github.benslabbert.trak.grpc.SearchRequest.serializeBinaryToWriter = fu
   f = message.getSearch();
   if (f.length > 0) {
     writer.writeString(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -3877,40 +3878,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.BrandRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.BrandRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.BrandRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.BrandRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    brandId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.BrandRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.BrandRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      brandId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -3940,13 +3941,13 @@ proto.io.github.benslabbert.trak.grpc.BrandRequest.deserializeBinaryFromReader =
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setBrandId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setBrandId(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -3976,8 +3977,8 @@ proto.io.github.benslabbert.trak.grpc.BrandRequest.serializeBinaryToWriter = fun
   f = message.getBrandId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -4019,40 +4020,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.CategoryRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.CategoryRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.CategoryRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.CategoryRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    categoryId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.CategoryRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.CategoryRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      categoryId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4082,13 +4083,13 @@ proto.io.github.benslabbert.trak.grpc.CategoryRequest.deserializeBinaryFromReade
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setCategoryId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setCategoryId(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4118,8 +4119,8 @@ proto.io.github.benslabbert.trak.grpc.CategoryRequest.serializeBinaryToWriter = 
   f = message.getCategoryId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -4168,43 +4169,43 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.repeatedFields_ = [3];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.CategoryResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.CategoryResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.CategoryResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    categoryId: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    productsList: jspb.Message.toObjectList(msg.getProductsList(),
-    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.CategoryResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.CategoryResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.CategoryResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      categoryId: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      productsList: jspb.Message.toObjectList(msg.getProductsList(),
+          proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4234,22 +4235,22 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.deserializeBinaryFromRead
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setCategoryId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
-      msg.addProducts(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setCategoryId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 3:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
+        msg.addProducts(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4279,23 +4280,23 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.serializeBinaryToWriter =
   f = message.getCategoryId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getProductsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      3,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
+        3,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
 };
@@ -4337,7 +4338,7 @@ proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.setName = funct
  */
 proto.io.github.benslabbert.trak.grpc.CategoryResponse.prototype.getProductsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
 };
 
 
@@ -4390,43 +4391,43 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.repeatedFields_ = [3];
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.BrandResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.BrandResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.BrandResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    brandId: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    productsList: jspb.Message.toObjectList(msg.getProductsList(),
-    proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.BrandResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.BrandResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.BrandResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      brandId: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+      productsList: jspb.Message.toObjectList(msg.getProductsList(),
+          proto.io.github.benslabbert.trak.grpc.ProductMessage.toObject, includeInstance)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4456,22 +4457,22 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.deserializeBinaryFromReader 
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setBrandId(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
-      msg.addProducts(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setBrandId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setName(value);
+        break;
+      case 3:
+        var value = new proto.io.github.benslabbert.trak.grpc.ProductMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.ProductMessage.deserializeBinaryFromReader);
+        msg.addProducts(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4501,23 +4502,23 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.serializeBinaryToWriter = fu
   f = message.getBrandId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
   f = message.getName();
   if (f.length > 0) {
     writer.writeString(
-      2,
-      f
+        2,
+        f
     );
   }
   f = message.getProductsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      3,
-      f,
-      proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
+        3,
+        f,
+        proto.io.github.benslabbert.trak.grpc.ProductMessage.serializeBinaryToWriter
     );
   }
 };
@@ -4559,7 +4560,7 @@ proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.setName = function
  */
 proto.io.github.benslabbert.trak.grpc.BrandResponse.prototype.getProductsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.ProductMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.ProductMessage, 3));
 };
 
 
@@ -4605,40 +4606,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.AddProductRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.AddProductRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.AddProductRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.AddProductRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    plId: jspb.Message.getFieldWithDefault(msg, 1, "")
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.AddProductRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.AddProductRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.AddProductRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.AddProductRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      plId: jspb.Message.getFieldWithDefault(msg, 1, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4668,13 +4669,13 @@ proto.io.github.benslabbert.trak.grpc.AddProductRequest.deserializeBinaryFromRea
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPlId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setPlId(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4704,8 +4705,8 @@ proto.io.github.benslabbert.trak.grpc.AddProductRequest.serializeBinaryToWriter 
   f = message.getPlId();
   if (f.length > 0) {
     writer.writeString(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -4747,40 +4748,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.AddProductResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.AddProductResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.AddProductResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    productId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.AddProductResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.AddProductResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.AddProductResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.AddProductResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      productId: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4810,13 +4811,13 @@ proto.io.github.benslabbert.trak.grpc.AddProductResponse.deserializeBinaryFromRe
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setProductId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setProductId(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4846,8 +4847,8 @@ proto.io.github.benslabbert.trak.grpc.AddProductResponse.serializeBinaryToWriter
   f = message.getProductId();
   if (f !== 0) {
     writer.writeInt64(
-      1,
-      f
+        1,
+        f
     );
   }
 };
@@ -4889,40 +4890,40 @@ if (goog.DEBUG && !COMPILED) {
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      pageRequest: (f = msg.getPageRequest()) && proto.io.github.benslabbert.trak.grpc.PageRequestMessage.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -4952,14 +4953,14 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.deserializeBinaryF
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
-      msg.setPageRequest(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.PageRequestMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageRequestMessage.deserializeBinaryFromReader);
+        msg.setPageRequest(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -4989,9 +4990,9 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.serializeBinaryToW
   f = message.getPageRequest();
   if (f != null) {
     writer.writeMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PageRequestMessage.serializeBinaryToWriter
     );
   }
 };
@@ -5003,7 +5004,7 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.serializeBinaryToW
  */
 proto.io.github.benslabbert.trak.grpc.GetAllPromotionsRequest.prototype.getPageRequest = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.PageRequestMessage} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 1));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageRequestMessage, 1));
 };
 
 
@@ -5055,42 +5056,42 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.repeatedFields_ =
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    promotionsList: jspb.Message.toObjectList(msg.getPromotionsList(),
-    proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject, includeInstance),
-    pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject(opt_includeInstance, this);
   };
 
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      promotionsList: jspb.Message.toObjectList(msg.getPromotionsList(),
+          proto.io.github.benslabbert.trak.grpc.PromotionMessage.toObject, includeInstance),
+      pageResponse: (f = msg.getPageResponse()) && proto.io.github.benslabbert.trak.grpc.PageResponse.toObject(includeInstance, f)
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
 }
 
 
@@ -5120,19 +5121,19 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.deserializeBinary
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader);
-      msg.addPromotions(value);
-      break;
-    case 2:
-      var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
-      reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
-      msg.setPageResponse(value);
-      break;
-    default:
-      reader.skipField();
-      break;
+      case 1:
+        var value = new proto.io.github.benslabbert.trak.grpc.PromotionMessage;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PromotionMessage.deserializeBinaryFromReader);
+        msg.addPromotions(value);
+        break;
+      case 2:
+        var value = new proto.io.github.benslabbert.trak.grpc.PageResponse;
+        reader.readMessage(value,proto.io.github.benslabbert.trak.grpc.PageResponse.deserializeBinaryFromReader);
+        msg.setPageResponse(value);
+        break;
+      default:
+        reader.skipField();
+        break;
     }
   }
   return msg;
@@ -5162,17 +5163,17 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.serializeBinaryTo
   f = message.getPromotionsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter
+        1,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PromotionMessage.serializeBinaryToWriter
     );
   }
   f = message.getPageResponse();
   if (f != null) {
     writer.writeMessage(
-      2,
-      f,
-      proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
+        2,
+        f,
+        proto.io.github.benslabbert.trak.grpc.PageResponse.serializeBinaryToWriter
     );
   }
 };
@@ -5184,7 +5185,7 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.serializeBinaryTo
  */
 proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.getPromotionsList = function() {
   return /** @type{!Array<!proto.io.github.benslabbert.trak.grpc.PromotionMessage>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.PromotionMessage, 1));
+      jspb.Message.getRepeatedWrapperField(this, proto.io.github.benslabbert.trak.grpc.PromotionMessage, 1));
 };
 
 
@@ -5215,7 +5216,7 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.clearPr
  */
 proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.getPageResponse = function() {
   return /** @type{?proto.io.github.benslabbert.trak.grpc.PageResponse} */ (
-    jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
+      jspb.Message.getWrapperField(this, proto.io.github.benslabbert.trak.grpc.PageResponse, 2));
 };
 
 
@@ -5236,6 +5237,175 @@ proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.clearPa
  */
 proto.io.github.benslabbert.trak.grpc.GetAllPromotionsResponse.prototype.hasPageResponse = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.io.github.benslabbert.trak.grpc.IngestRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.io.github.benslabbert.trak.grpc.IngestRequest.displayName = 'proto.io.github.benslabbert.trak.grpc.IngestRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+  /**
+   * Creates an object representation of this proto suitable for use in Soy templates.
+   * Field names that are reserved in JavaScript and will be renamed to pb_name.
+   * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+   * For the list of reserved names please see:
+   *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+   * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+   *     for transitional soy proto support: http://goto/soy-param-migration
+   * @return {!Object}
+   */
+  proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.toObject = function(opt_includeInstance) {
+    return proto.io.github.benslabbert.trak.grpc.IngestRequest.toObject(opt_includeInstance, this);
+  };
+
+
+  /**
+   * Static version of the {@see toObject} method.
+   * @param {boolean|undefined} includeInstance Whether to include the JSPB
+   *     instance for transitional soy proto support:
+   *     http://goto/soy-param-migration
+   * @param {!proto.io.github.benslabbert.trak.grpc.IngestRequest} msg The msg instance to transform.
+   * @return {!Object}
+   * @suppress {unusedLocalVariables} f is only used for nested messages
+   */
+  proto.io.github.benslabbert.trak.grpc.IngestRequest.toObject = function(includeInstance, msg) {
+    var f, obj = {
+      rdsId: jspb.Message.getFieldWithDefault(msg, 1, 0),
+      text: jspb.Message.getFieldWithDefault(msg, 2, "")
+    };
+
+    if (includeInstance) {
+      obj.$jspbMessageInstance = msg;
+    }
+    return obj;
+  };
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.io.github.benslabbert.trak.grpc.IngestRequest}
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.io.github.benslabbert.trak.grpc.IngestRequest;
+  return proto.io.github.benslabbert.trak.grpc.IngestRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.io.github.benslabbert.trak.grpc.IngestRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.io.github.benslabbert.trak.grpc.IngestRequest}
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+      case 1:
+        var value = /** @type {number} */ (reader.readInt64());
+        msg.setRdsId(value);
+        break;
+      case 2:
+        var value = /** @type {string} */ (reader.readString());
+        msg.setText(value);
+        break;
+      default:
+        reader.skipField();
+        break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.io.github.benslabbert.trak.grpc.IngestRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.io.github.benslabbert.trak.grpc.IngestRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getRdsId();
+  if (f !== 0) {
+    writer.writeInt64(
+        1,
+        f
+    );
+  }
+  f = message.getText();
+  if (f.length > 0) {
+    writer.writeString(
+        2,
+        f
+    );
+  }
+};
+
+
+/**
+ * optional int64 rds_id = 1;
+ * @return {number}
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.getRdsId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.setRdsId = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+/**
+ * optional string text = 2;
+ * @return {string}
+ */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.getText = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.io.github.benslabbert.trak.grpc.IngestRequest.prototype.setText = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
