@@ -102,6 +102,7 @@ message SearchResponse {
 }
 
 message SearchResult {
+    // todo this id should be migrated to int64
     string id = 1;
     string name = 2;
     float score = 3;
@@ -148,20 +149,10 @@ message GetAllPromotionsResponse {
     PageResponse page_response = 2;
 }
 
-message IngestRequest {
-    int64 rds_id = 1;
-    string text = 2;
-}
-
 service SearchService {
     rpc brandSearch (SearchRequest) returns (SearchResponse);
-    rpc brandIngest (IngestRequest) returns (Empty);
-
     rpc productSearch (SearchRequest) returns (SearchResponse);
-    rpc productIngest (IngestRequest) returns (Empty);
-
     rpc categorySearch (SearchRequest) returns (SearchResponse);
-    rpc categoryIngest (IngestRequest) returns (Empty);
 }
 
 service LatestService {
