@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package trak.grpc.search.v1;
+
+option csharp_namespace = "Trak.Grpc.Search.V1";
+option go_package = "searchv1";
+option java_multiple_files = true;
+option java_outer_classname = "SearchMessagesProto";
+option java_package = "com.trak.grpc.search.v1";
+option objc_class_prefix = "TGS";
+option php_namespace = "Trak\\Grpc\\Search\\V1";
+
+// Results of the search.
+message SearchResult {
+  // id of the record.
+  uint32 id = 1;
+  // text to describe the record.
+  string text = 2;
+  // an indication of the search request's correlation to this record.
+  float score = 3;
+}

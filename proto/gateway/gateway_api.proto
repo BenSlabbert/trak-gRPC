@@ -1,0 +1,119 @@
+syntax = "proto3";
+
+package trak.grpc.gateway.v1;
+
+option csharp_namespace = "Trak.Grpc.Gateway.V1";
+option go_package = "gatewayv1";
+option java_multiple_files = true;
+option java_outer_classname = "GatewayApiProto";
+option java_package = "com.trak.grpc.gateway.v1";
+option objc_class_prefix = "TGG";
+option php_namespace = "Trak\\Grpc\\Gateway\\V1";
+
+// Can be used as a simple acknowledgement.
+message Empty {}
+
+// Data needed to draw the change in price over time.
+message ChartMessage {
+  repeated string labels = 1;
+  repeated ChartContentMessage content = 2;
+}
+
+// Configuration of each data point in the chart.
+message ChartContentMessage {
+  string label = 1;
+  string fill_color = 2;
+  string stroke_color = 3;
+  string point_color = 4;
+  string point_stroke_color = 5;
+  string point_highlight_fill = 6;
+  string point_highlight_stroke = 7;
+  repeated uint32 content = 8;
+}
+
+// Message describing a Brand.
+message BrandMessage {
+  uint32 id = 1;
+  string name = 2;
+}
+
+// Message describing a Category.
+message CategoryMessage {
+  uint32 id = 1;
+  string name = 2;
+}
+
+// Message describing a Product.
+message ProductMessage {
+  string name = 1;
+  string product_url = 2;
+  string price = 3;
+  string image_url = 4;
+  uint32 id = 5;
+  BrandMessage brand = 6;
+  repeated CategoryMessage categories = 7;
+}
+
+// Details of the requested page.
+message PageResponse {
+  uint32 current_page_number = 1;
+  uint32 last_page_number = 2;
+  uint32 total_items = 3;
+  uint32 page_size = 4;
+  bool is_last_page = 5;
+  bool is_first_page = 6;
+}
+
+// Latest products response.
+message LatestResponse {
+  repeated ProductMessage products = 1;
+  PageResponse page = 2;
+}
+
+// Promotions response.
+message PromotionResponse {
+  repeated ProductMessage products = 1;
+  PageResponse page_response = 2;
+}
+
+// Detailing a single promotion.
+message PromotionMessage {
+  uint32 id = 1;
+  string name = 2;
+  uint32 promotion_id = 3;
+  uint32 created = 4;
+}
+
+// Detailing a single product.
+message ProductResponse {
+  ProductMessage product = 1;
+  ProductStatsResponse stats = 2;
+}
+
+// Pricing statistics for a product.
+message ProductStatsResponse {
+  uint32 min_price = 1;
+  uint32 max_price = 2;
+  double mean_price = 3;
+  ChartMessage chart = 4;
+}
+
+// Products associated with a  category.
+message CategoryResponse {
+  uint32 category_id = 1;
+  string name = 2;
+  repeated ProductMessage products = 3;
+}
+
+// Products associated with a brand.
+message BrandResponse {
+  uint32 brand_id = 1;
+  string name = 2;
+  repeated ProductMessage products = 3;
+}
+
+// Paginated promotions.
+message GetAllPromotionsResponse {
+  repeated PromotionMessage promotions = 1;
+  PageResponse page_response = 2;
+}

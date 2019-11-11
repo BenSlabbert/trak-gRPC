@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package trak.grpc.search.v1;
+
+option csharp_namespace = "Trak.Grpc.Search.V1";
+option go_package = "searchv1";
+option java_multiple_files = true;
+option java_outer_classname = "SearchApiProto";
+option java_package = "com.trak.grpc.search.v1";
+option objc_class_prefix = "TGS";
+option php_namespace = "Trak\\Grpc\\Search\\V1";
+
+import "proto/search/search_messages.proto";
+
+// Various RPCs for searching Brands, Products and Categories.
+service SearchAPI {
+  //  Search for Brands.
+  rpc BrandSearch(BrandSearchRequest) returns (BrandSearchResponse);
+  //  Search for Products.
+  rpc ProductSearch(ProductSearchRequest) returns (ProductSearchResponse);
+  //  Search for Categories.
+  rpc CategorySearch(CategorySearchRequest) returns (CategorySearchResponse);
+}
+
+message BrandSearchRequest {
+  string search = 1;
+}
+
+message BrandSearchResponse {
+  repeated SearchResult results = 1;
+}
+
+message ProductSearchRequest {
+  string search = 1;
+}
+
+message ProductSearchResponse {
+  repeated SearchResult results = 1;
+}
+
+message CategorySearchRequest {
+  string search = 1;
+}
+
+message CategorySearchResponse {
+  repeated SearchResult results = 1;
+}
