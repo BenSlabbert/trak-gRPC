@@ -117,3 +117,8 @@ message GetAllPromotionsResponse {
   repeated PromotionMessage promotions = 1;
   PageResponse page_response = 2;
 }
+
+// AddProductRequest user manually adds a new product with the product's url.
+message AddProductRequest {
+  string url = 1;
+}

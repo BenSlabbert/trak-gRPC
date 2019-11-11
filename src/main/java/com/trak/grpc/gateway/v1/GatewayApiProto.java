@@ -89,6 +89,11 @@ public final class GatewayApiProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_trak_grpc_gateway_v1_GetAllPromotionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_trak_grpc_gateway_v1_AddProductRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_trak_grpc_gateway_v1_AddProductRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -142,10 +147,11 @@ public final class GatewayApiProto {
       "ctMessage\"\221\001\n\030GetAllPromotionsResponse\022:" +
       "\n\npromotions\030\001 \003(\0132&.trak.grpc.gateway.v" +
       "1.PromotionMessage\0229\n\rpage_response\030\002 \001(" +
-      "\0132\".trak.grpc.gateway.v1.PageResponseBl\n" +
-      "\030com.trak.grpc.gateway.v1B\017GatewayApiPro" +
-      "toP\001Z\tgatewayv1\242\002\003TGG\252\002\024Trak.Grpc.Gatewa" +
-      "y.V1\312\002\024Trak\\Grpc\\Gateway\\V1b\006proto3"
+      "\0132\".trak.grpc.gateway.v1.PageResponse\" \n" +
+      "\021AddProductRequest\022\013\n\003url\030\001 \001(\tBl\n\030com.t" +
+      "rak.grpc.gateway.v1B\017GatewayApiProtoP\001Z\t" +
+      "gatewayv1\242\002\003TGG\252\002\024Trak.Grpc.Gateway.V1\312\002" +
+      "\024Trak\\Grpc\\Gateway\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -241,6 +247,12 @@ public final class GatewayApiProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_trak_grpc_gateway_v1_GetAllPromotionsResponse_descriptor,
         new java.lang.String[] { "Promotions", "PageResponse", });
+    internal_static_trak_grpc_gateway_v1_AddProductRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_trak_grpc_gateway_v1_AddProductRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_trak_grpc_gateway_v1_AddProductRequest_descriptor,
+        new java.lang.String[] { "Url", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
