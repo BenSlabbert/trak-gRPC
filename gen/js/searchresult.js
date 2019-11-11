@@ -66,7 +66,7 @@ proto.trak.grpc.search.v1.SearchResult.prototype.toObject = function(opt_include
  */
 proto.trak.grpc.search.v1.SearchResult.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     text: jspb.Message.getFieldWithDefault(msg, 2, ""),
     score: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0)
   };
@@ -106,7 +106,7 @@ proto.trak.grpc.search.v1.SearchResult.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint32());
+      var value = /** @type {string} */ (reader.readString());
       msg.setId(value);
       break;
     case 2:
@@ -147,8 +147,8 @@ proto.trak.grpc.search.v1.SearchResult.prototype.serializeBinary = function() {
 proto.trak.grpc.search.v1.SearchResult.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
-  if (f !== 0) {
-    writer.writeUint32(
+  if (f.length > 0) {
+    writer.writeString(
       1,
       f
     );
@@ -171,17 +171,17 @@ proto.trak.grpc.search.v1.SearchResult.serializeBinaryToWriter = function(messag
 
 
 /**
- * optional uint32 id = 1;
- * @return {number}
+ * optional string id = 1;
+ * @return {string}
  */
 proto.trak.grpc.search.v1.SearchResult.prototype.getId = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {number} value */
+/** @param {string} value */
 proto.trak.grpc.search.v1.SearchResult.prototype.setId = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 

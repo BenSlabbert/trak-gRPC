@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SearchResult() {
+    id_ = "";
     text_ = "";
   }
 
@@ -53,9 +54,10 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            id_ = input.readUInt32();
+            id_ = s;
             break;
           }
           case 18: {
@@ -102,16 +104,45 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 1;
-  private int id_;
+  private volatile java.lang.Object id_;
   /**
    * <pre>
    * id of the record.
    * </pre>
    *
-   * <code>uint32 id = 1;</code>
+   * <code>string id = 1;</code>
    */
-  public int getId() {
-    return id_;
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      id_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * id of the record.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdBytes() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      id_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int TEXT_FIELD_NUMBER = 2;
@@ -183,8 +214,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (id_ != 0) {
-      output.writeUInt32(1, id_);
+    if (!getIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
     if (!getTextBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
@@ -201,9 +232,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (id_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(1, id_);
+    if (!getIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
     if (!getTextBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
@@ -227,8 +257,8 @@ private static final long serialVersionUID = 0L;
     }
     com.trak.grpc.search.v1.SearchResult other = (com.trak.grpc.search.v1.SearchResult) obj;
 
-    if (getId()
-        != other.getId()) return false;
+    if (!getId()
+        .equals(other.getId())) return false;
     if (!getText()
         .equals(other.getText())) return false;
     if (java.lang.Float.floatToIntBits(getScore())
@@ -246,7 +276,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId();
+    hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + TEXT_FIELD_NUMBER;
     hash = (53 * hash) + getText().hashCode();
     hash = (37 * hash) + SCORE_FIELD_NUMBER;
@@ -389,7 +419,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      id_ = 0;
+      id_ = "";
 
       text_ = "";
 
@@ -472,8 +502,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.trak.grpc.search.v1.SearchResult other) {
       if (other == com.trak.grpc.search.v1.SearchResult.getDefaultInstance()) return this;
-      if (other.getId() != 0) {
-        setId(other.getId());
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
+        onChanged();
       }
       if (!other.getText().isEmpty()) {
         text_ = other.text_;
@@ -511,26 +542,59 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int id_ ;
+    private java.lang.Object id_ = "";
     /**
      * <pre>
      * id of the record.
      * </pre>
      *
-     * <code>uint32 id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public int getId() {
-      return id_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * id of the record.
      * </pre>
      *
-     * <code>uint32 id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public Builder setId(int value) {
-      
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * id of the record.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public Builder setId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       id_ = value;
       onChanged();
       return this;
@@ -540,11 +604,29 @@ private static final long serialVersionUID = 0L;
      * id of the record.
      * </pre>
      *
-     * <code>uint32 id = 1;</code>
+     * <code>string id = 1;</code>
      */
     public Builder clearId() {
       
-      id_ = 0;
+      id_ = getDefaultInstance().getId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * id of the record.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public Builder setIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      id_ = value;
       onChanged();
       return this;
     }

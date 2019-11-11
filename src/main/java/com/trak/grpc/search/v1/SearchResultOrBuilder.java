@@ -12,9 +12,18 @@ public interface SearchResultOrBuilder extends
    * id of the record.
    * </pre>
    *
-   * <code>uint32 id = 1;</code>
+   * <code>string id = 1;</code>
    */
-  int getId();
+  java.lang.String getId();
+  /**
+   * <pre>
+   * id of the record.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
 
   /**
    * <pre>

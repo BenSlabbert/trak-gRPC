@@ -13,7 +13,7 @@ option php_namespace = "Trak\\Grpc\\Search\\V1";
 // Results of the search.
 message SearchResult {
   // id of the record.
-  uint32 id = 1;
+  string id = 1;
   // text to describe the record.
   string text = 2;
   // an indication of the search request's correlation to this record.

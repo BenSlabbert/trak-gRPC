@@ -30,7 +30,7 @@ public final class SearchMessagesProto {
     java.lang.String[] descriptorData = {
       "\n\"proto/search/search_messages.proto\022\023tr" +
       "ak.grpc.search.v1\"7\n\014SearchResult\022\n\n\002id\030" +
-      "\001 \001(\r\022\014\n\004text\030\002 \001(\t\022\r\n\005score\030\003 \001(\002Bl\n\027co" +
+      "\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\r\n\005score\030\003 \001(\002Bl\n\027co" +
       "m.trak.grpc.search.v1B\023SearchMessagesPro" +
       "toP\001Z\010searchv1\242\002\003TGS\252\002\023Trak.Grpc.Search." +
       "V1\312\002\023Trak\\Grpc\\Search\\V1b\006proto3"
