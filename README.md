@@ -10,6 +10,13 @@ Run `prototool generate proto` to generate the code
 
 You still need `protoc` installed
 
+NB: this does not compile the Javascript code correctly...
+
+```shell script
+node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:gen/js --grpc_out=gen/js/ --plugin=protoc-gen-grpc=node_modules/.bin/grpc_tools_node_protoc_plugin proto/gateway/gateway_api.proto
+node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:gen/js --grpc_out=gen/js/ --plugin=protoc-gen-grpc=node_modules/.bin/grpc_tools_node_protoc_plugin proto/search/search_api.proto proto/search/search_messages.proto
+```
+
 ## This is the old way
 
 ## compile protobufs and grpc services

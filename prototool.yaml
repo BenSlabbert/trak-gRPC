@@ -16,4 +16,5 @@ generate:
     - name: java
       output: src/main/java
     - name: js
+      flags: protoc-gen-grpc=node_modules/.bin/grpc_tools_node_protoc_plugin
       output: gen/js
