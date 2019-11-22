@@ -2144,7 +2144,8 @@ proto.trak.grpc.gateway.v1.PromotionMessage.toObject = function(includeInstance,
     id: jspb.Message.getFieldWithDefault(msg, 1, 0),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     promotionId: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    created: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    start: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    end: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -2195,7 +2196,11 @@ proto.trak.grpc.gateway.v1.PromotionMessage.deserializeBinaryFromReader = functi
       break;
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setCreated(value);
+      msg.setStart(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setEnd(value);
       break;
     default:
       reader.skipField();
@@ -2247,10 +2252,17 @@ proto.trak.grpc.gateway.v1.PromotionMessage.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getCreated();
+  f = message.getStart();
   if (f !== 0) {
     writer.writeUint32(
       4,
+      f
+    );
+  }
+  f = message.getEnd();
+  if (f !== 0) {
+    writer.writeUint32(
+      5,
       f
     );
   }
@@ -2303,17 +2315,32 @@ proto.trak.grpc.gateway.v1.PromotionMessage.prototype.setPromotionId = function(
 
 
 /**
- * optional uint32 created = 4;
+ * optional uint32 start = 4;
  * @return {number}
  */
-proto.trak.grpc.gateway.v1.PromotionMessage.prototype.getCreated = function() {
+proto.trak.grpc.gateway.v1.PromotionMessage.prototype.getStart = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /** @param {number} value */
-proto.trak.grpc.gateway.v1.PromotionMessage.prototype.setCreated = function(value) {
+proto.trak.grpc.gateway.v1.PromotionMessage.prototype.setStart = function(value) {
   jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional uint32 end = 5;
+ * @return {number}
+ */
+proto.trak.grpc.gateway.v1.PromotionMessage.prototype.getEnd = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.trak.grpc.gateway.v1.PromotionMessage.prototype.setEnd = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

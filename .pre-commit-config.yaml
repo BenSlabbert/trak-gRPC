@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-protos
+        language: 'script'
+        name: 'validate-protos'
+        entry: validate-protos.sh

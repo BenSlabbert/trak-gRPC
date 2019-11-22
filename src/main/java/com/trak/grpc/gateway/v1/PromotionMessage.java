@@ -71,7 +71,12 @@ private static final long serialVersionUID = 0L;
           }
           case 32: {
 
-            created_ = input.readUInt32();
+            start_ = input.readUInt32();
+            break;
+          }
+          case 40: {
+
+            end_ = input.readUInt32();
             break;
           }
           default: {
@@ -158,13 +163,22 @@ private static final long serialVersionUID = 0L;
     return promotionId_;
   }
 
-  public static final int CREATED_FIELD_NUMBER = 4;
-  private int created_;
+  public static final int START_FIELD_NUMBER = 4;
+  private int start_;
   /**
-   * <code>uint32 created = 4;</code>
+   * <code>uint32 start = 4;</code>
    */
-  public int getCreated() {
-    return created_;
+  public int getStart() {
+    return start_;
+  }
+
+  public static final int END_FIELD_NUMBER = 5;
+  private int end_;
+  /**
+   * <code>uint32 end = 5;</code>
+   */
+  public int getEnd() {
+    return end_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -190,8 +204,11 @@ private static final long serialVersionUID = 0L;
     if (promotionId_ != 0) {
       output.writeUInt32(3, promotionId_);
     }
-    if (created_ != 0) {
-      output.writeUInt32(4, created_);
+    if (start_ != 0) {
+      output.writeUInt32(4, start_);
+    }
+    if (end_ != 0) {
+      output.writeUInt32(5, end_);
     }
     unknownFields.writeTo(output);
   }
@@ -213,9 +230,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(3, promotionId_);
     }
-    if (created_ != 0) {
+    if (start_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeUInt32Size(4, created_);
+        .computeUInt32Size(4, start_);
+    }
+    if (end_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(5, end_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -238,8 +259,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (getPromotionId()
         != other.getPromotionId()) return false;
-    if (getCreated()
-        != other.getCreated()) return false;
+    if (getStart()
+        != other.getStart()) return false;
+    if (getEnd()
+        != other.getEnd()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -257,8 +280,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + PROMOTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPromotionId();
-    hash = (37 * hash) + CREATED_FIELD_NUMBER;
-    hash = (53 * hash) + getCreated();
+    hash = (37 * hash) + START_FIELD_NUMBER;
+    hash = (53 * hash) + getStart();
+    hash = (37 * hash) + END_FIELD_NUMBER;
+    hash = (53 * hash) + getEnd();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,7 +427,9 @@ private static final long serialVersionUID = 0L;
 
       promotionId_ = 0;
 
-      created_ = 0;
+      start_ = 0;
+
+      end_ = 0;
 
       return this;
     }
@@ -433,7 +460,8 @@ private static final long serialVersionUID = 0L;
       result.id_ = id_;
       result.name_ = name_;
       result.promotionId_ = promotionId_;
-      result.created_ = created_;
+      result.start_ = start_;
+      result.end_ = end_;
       onBuilt();
       return result;
     }
@@ -492,8 +520,11 @@ private static final long serialVersionUID = 0L;
       if (other.getPromotionId() != 0) {
         setPromotionId(other.getPromotionId());
       }
-      if (other.getCreated() != 0) {
-        setCreated(other.getCreated());
+      if (other.getStart() != 0) {
+        setStart(other.getStart());
+      }
+      if (other.getEnd() != 0) {
+        setEnd(other.getEnd());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -645,28 +676,54 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int created_ ;
+    private int start_ ;
     /**
-     * <code>uint32 created = 4;</code>
+     * <code>uint32 start = 4;</code>
      */
-    public int getCreated() {
-      return created_;
+    public int getStart() {
+      return start_;
     }
     /**
-     * <code>uint32 created = 4;</code>
+     * <code>uint32 start = 4;</code>
      */
-    public Builder setCreated(int value) {
+    public Builder setStart(int value) {
       
-      created_ = value;
+      start_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>uint32 created = 4;</code>
+     * <code>uint32 start = 4;</code>
      */
-    public Builder clearCreated() {
+    public Builder clearStart() {
       
-      created_ = 0;
+      start_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int end_ ;
+    /**
+     * <code>uint32 end = 5;</code>
+     */
+    public int getEnd() {
+      return end_;
+    }
+    /**
+     * <code>uint32 end = 5;</code>
+     */
+    public Builder setEnd(int value) {
+      
+      end_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>uint32 end = 5;</code>
+     */
+    public Builder clearEnd() {
+      
+      end_ = 0;
       onChanged();
       return this;
     }

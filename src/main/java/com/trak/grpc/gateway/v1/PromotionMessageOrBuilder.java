@@ -28,7 +28,12 @@ public interface PromotionMessageOrBuilder extends
   int getPromotionId();
 
   /**
-   * <code>uint32 created = 4;</code>
+   * <code>uint32 start = 4;</code>
    */
-  int getCreated();
+  int getStart();
+
+  /**
+   * <code>uint32 end = 5;</code>
+   */
+  int getEnd();
 }

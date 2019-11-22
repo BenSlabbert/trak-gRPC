@@ -81,7 +81,8 @@ message PromotionMessage {
   uint32 id = 1;
   string name = 2;
   uint32 promotion_id = 3;
-  uint32 created = 4;
+  uint32 start = 4;
+  uint32 end = 5;
 }
 
 // Detailing a single product.
