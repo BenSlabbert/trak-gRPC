@@ -126,32 +126,34 @@ public final class GatewayApiProto {
       "is_first_page\030\006 \001(\010\"z\n\016LatestResponse\0226\n" +
       "\010products\030\001 \003(\0132$.trak.grpc.gateway.v1.P" +
       "roductMessage\0220\n\004page\030\002 \001(\0132\".trak.grpc." +
-      "gateway.v1.PageResponse\"\206\001\n\021PromotionRes" +
+      "gateway.v1.PageResponse\"\301\001\n\021PromotionRes" +
       "ponse\0226\n\010products\030\001 \003(\0132$.trak.grpc.gate" +
       "way.v1.ProductMessage\0229\n\rpage_response\030\002" +
       " \001(\0132\".trak.grpc.gateway.v1.PageResponse" +
-      "\"^\n\020PromotionMessage\022\n\n\002id\030\001 \001(\r\022\014\n\004name" +
-      "\030\002 \001(\t\022\024\n\014promotion_id\030\003 \001(\r\022\r\n\005start\030\004 " +
-      "\001(\r\022\013\n\003end\030\005 \001(\r\"\203\001\n\017ProductResponse\0225\n\007" +
-      "product\030\001 \001(\0132$.trak.grpc.gateway.v1.Pro" +
-      "ductMessage\0229\n\005stats\030\002 \001(\0132*.trak.grpc.g" +
-      "ateway.v1.ProductStatsResponse\"\203\001\n\024Produ" +
-      "ctStatsResponse\022\021\n\tmin_price\030\001 \001(\r\022\021\n\tma" +
-      "x_price\030\002 \001(\r\022\022\n\nmean_price\030\003 \001(\001\0221\n\005cha" +
-      "rt\030\004 \001(\0132\".trak.grpc.gateway.v1.ChartMes" +
-      "sage\"m\n\020CategoryResponse\022\023\n\013category_id\030" +
-      "\001 \001(\r\022\014\n\004name\030\002 \001(\t\0226\n\010products\030\003 \003(\0132$." +
-      "trak.grpc.gateway.v1.ProductMessage\"g\n\rB" +
-      "randResponse\022\020\n\010brand_id\030\001 \001(\r\022\014\n\004name\030\002" +
-      " \001(\t\0226\n\010products\030\003 \003(\0132$.trak.grpc.gatew" +
-      "ay.v1.ProductMessage\"\221\001\n\030GetAllPromotion" +
-      "sResponse\022:\n\npromotions\030\001 \003(\0132&.trak.grp" +
-      "c.gateway.v1.PromotionMessage\0229\n\rpage_re" +
-      "sponse\030\002 \001(\0132\".trak.grpc.gateway.v1.Page" +
-      "Response\" \n\021AddProductRequest\022\013\n\003url\030\001 \001" +
-      "(\tBl\n\030com.trak.grpc.gateway.v1B\017GatewayA" +
-      "piProtoP\001Z\tgatewayv1\242\002\003TGG\252\002\024Trak.Grpc.G" +
-      "ateway.V1\312\002\024Trak\\Grpc\\Gateway\\V1b\006proto3"
+      "\0229\n\tpromotion\030\003 \001(\0132&.trak.grpc.gateway." +
+      "v1.PromotionMessage\"^\n\020PromotionMessage\022" +
+      "\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\024\n\014promotion_i" +
+      "d\030\003 \001(\r\022\r\n\005start\030\004 \001(\r\022\013\n\003end\030\005 \001(\r\"\203\001\n\017" +
+      "ProductResponse\0225\n\007product\030\001 \001(\0132$.trak." +
+      "grpc.gateway.v1.ProductMessage\0229\n\005stats\030" +
+      "\002 \001(\0132*.trak.grpc.gateway.v1.ProductStat" +
+      "sResponse\"\203\001\n\024ProductStatsResponse\022\021\n\tmi" +
+      "n_price\030\001 \001(\r\022\021\n\tmax_price\030\002 \001(\r\022\022\n\nmean" +
+      "_price\030\003 \001(\001\0221\n\005chart\030\004 \001(\0132\".trak.grpc." +
+      "gateway.v1.ChartMessage\"m\n\020CategoryRespo" +
+      "nse\022\023\n\013category_id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\0226" +
+      "\n\010products\030\003 \003(\0132$.trak.grpc.gateway.v1." +
+      "ProductMessage\"g\n\rBrandResponse\022\020\n\010brand" +
+      "_id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\0226\n\010products\030\003 \003(" +
+      "\0132$.trak.grpc.gateway.v1.ProductMessage\"" +
+      "\221\001\n\030GetAllPromotionsResponse\022:\n\npromotio" +
+      "ns\030\001 \003(\0132&.trak.grpc.gateway.v1.Promotio" +
+      "nMessage\0229\n\rpage_response\030\002 \001(\0132\".trak.g" +
+      "rpc.gateway.v1.PageResponse\" \n\021AddProduc" +
+      "tRequest\022\013\n\003url\030\001 \001(\tBl\n\030com.trak.grpc.g" +
+      "ateway.v1B\017GatewayApiProtoP\001Z\tgatewayv1\242" +
+      "\002\003TGG\252\002\024Trak.Grpc.Gateway.V1\312\002\024Trak\\Grpc" +
+      "\\Gateway\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -210,7 +212,7 @@ public final class GatewayApiProto {
     internal_static_trak_grpc_gateway_v1_PromotionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_trak_grpc_gateway_v1_PromotionResponse_descriptor,
-        new java.lang.String[] { "Products", "PageResponse", });
+        new java.lang.String[] { "Products", "PageResponse", "Promotion", });
     internal_static_trak_grpc_gateway_v1_PromotionMessage_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_trak_grpc_gateway_v1_PromotionMessage_fieldAccessorTable = new

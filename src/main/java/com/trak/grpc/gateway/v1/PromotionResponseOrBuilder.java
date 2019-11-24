@@ -43,4 +43,17 @@ public interface PromotionResponseOrBuilder extends
    * <code>.trak.grpc.gateway.v1.PageResponse page_response = 2;</code>
    */
   com.trak.grpc.gateway.v1.PageResponseOrBuilder getPageResponseOrBuilder();
+
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  boolean hasPromotion();
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  com.trak.grpc.gateway.v1.PromotionMessage getPromotion();
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  com.trak.grpc.gateway.v1.PromotionMessageOrBuilder getPromotionOrBuilder();
 }

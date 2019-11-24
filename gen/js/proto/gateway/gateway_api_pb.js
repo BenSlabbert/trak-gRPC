@@ -1938,7 +1938,8 @@ proto.trak.grpc.gateway.v1.PromotionResponse.toObject = function(includeInstance
   var f, obj = {
     productsList: jspb.Message.toObjectList(msg.getProductsList(),
     proto.trak.grpc.gateway.v1.ProductMessage.toObject, includeInstance),
-    pageResponse: (f = msg.getPageResponse()) && proto.trak.grpc.gateway.v1.PageResponse.toObject(includeInstance, f)
+    pageResponse: (f = msg.getPageResponse()) && proto.trak.grpc.gateway.v1.PageResponse.toObject(includeInstance, f),
+    promotion: (f = msg.getPromotion()) && proto.trak.grpc.gateway.v1.PromotionMessage.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1985,6 +1986,11 @@ proto.trak.grpc.gateway.v1.PromotionResponse.deserializeBinaryFromReader = funct
       reader.readMessage(value,proto.trak.grpc.gateway.v1.PageResponse.deserializeBinaryFromReader);
       msg.setPageResponse(value);
       break;
+    case 3:
+      var value = new proto.trak.grpc.gateway.v1.PromotionMessage;
+      reader.readMessage(value,proto.trak.grpc.gateway.v1.PromotionMessage.deserializeBinaryFromReader);
+      msg.setPromotion(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -2028,6 +2034,14 @@ proto.trak.grpc.gateway.v1.PromotionResponse.serializeBinaryToWriter = function(
       2,
       f,
       proto.trak.grpc.gateway.v1.PageResponse.serializeBinaryToWriter
+    );
+  }
+  f = message.getPromotion();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.trak.grpc.gateway.v1.PromotionMessage.serializeBinaryToWriter
     );
   }
 };
@@ -2091,6 +2105,36 @@ proto.trak.grpc.gateway.v1.PromotionResponse.prototype.clearPageResponse = funct
  */
 proto.trak.grpc.gateway.v1.PromotionResponse.prototype.hasPageResponse = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional PromotionMessage promotion = 3;
+ * @return {?proto.trak.grpc.gateway.v1.PromotionMessage}
+ */
+proto.trak.grpc.gateway.v1.PromotionResponse.prototype.getPromotion = function() {
+  return /** @type{?proto.trak.grpc.gateway.v1.PromotionMessage} */ (
+    jspb.Message.getWrapperField(this, proto.trak.grpc.gateway.v1.PromotionMessage, 3));
+};
+
+
+/** @param {?proto.trak.grpc.gateway.v1.PromotionMessage|undefined} value */
+proto.trak.grpc.gateway.v1.PromotionResponse.prototype.setPromotion = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.trak.grpc.gateway.v1.PromotionResponse.prototype.clearPromotion = function() {
+  this.setPromotion(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.trak.grpc.gateway.v1.PromotionResponse.prototype.hasPromotion = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

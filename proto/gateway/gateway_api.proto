@@ -74,6 +74,7 @@ message LatestResponse {
 message PromotionResponse {
   repeated ProductMessage products = 1;
   PageResponse page_response = 2;
+  PromotionMessage promotion = 3;
 }
 
 // Detailing a single promotion.

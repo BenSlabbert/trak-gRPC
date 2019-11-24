@@ -76,6 +76,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 26: {
+            com.trak.grpc.gateway.v1.PromotionMessage.Builder subBuilder = null;
+            if (promotion_ != null) {
+              subBuilder = promotion_.toBuilder();
+            }
+            promotion_ = input.readMessage(com.trak.grpc.gateway.v1.PromotionMessage.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(promotion_);
+              promotion_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -167,6 +180,27 @@ private static final long serialVersionUID = 0L;
     return getPageResponse();
   }
 
+  public static final int PROMOTION_FIELD_NUMBER = 3;
+  private com.trak.grpc.gateway.v1.PromotionMessage promotion_;
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  public boolean hasPromotion() {
+    return promotion_ != null;
+  }
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  public com.trak.grpc.gateway.v1.PromotionMessage getPromotion() {
+    return promotion_ == null ? com.trak.grpc.gateway.v1.PromotionMessage.getDefaultInstance() : promotion_;
+  }
+  /**
+   * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+   */
+  public com.trak.grpc.gateway.v1.PromotionMessageOrBuilder getPromotionOrBuilder() {
+    return getPromotion();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -187,6 +221,9 @@ private static final long serialVersionUID = 0L;
     if (pageResponse_ != null) {
       output.writeMessage(2, getPageResponse());
     }
+    if (promotion_ != null) {
+      output.writeMessage(3, getPromotion());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -203,6 +240,10 @@ private static final long serialVersionUID = 0L;
     if (pageResponse_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPageResponse());
+    }
+    if (promotion_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getPromotion());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -226,6 +267,11 @@ private static final long serialVersionUID = 0L;
       if (!getPageResponse()
           .equals(other.getPageResponse())) return false;
     }
+    if (hasPromotion() != other.hasPromotion()) return false;
+    if (hasPromotion()) {
+      if (!getPromotion()
+          .equals(other.getPromotion())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -244,6 +290,10 @@ private static final long serialVersionUID = 0L;
     if (hasPageResponse()) {
       hash = (37 * hash) + PAGE_RESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + getPageResponse().hashCode();
+    }
+    if (hasPromotion()) {
+      hash = (37 * hash) + PROMOTION_FIELD_NUMBER;
+      hash = (53 * hash) + getPromotion().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -395,6 +445,12 @@ private static final long serialVersionUID = 0L;
         pageResponse_ = null;
         pageResponseBuilder_ = null;
       }
+      if (promotionBuilder_ == null) {
+        promotion_ = null;
+      } else {
+        promotion_ = null;
+        promotionBuilder_ = null;
+      }
       return this;
     }
 
@@ -435,6 +491,11 @@ private static final long serialVersionUID = 0L;
         result.pageResponse_ = pageResponse_;
       } else {
         result.pageResponse_ = pageResponseBuilder_.build();
+      }
+      if (promotionBuilder_ == null) {
+        result.promotion_ = promotion_;
+      } else {
+        result.promotion_ = promotionBuilder_.build();
       }
       onBuilt();
       return result;
@@ -512,6 +573,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPageResponse()) {
         mergePageResponse(other.getPageResponse());
+      }
+      if (other.hasPromotion()) {
+        mergePromotion(other.getPromotion());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -898,6 +962,123 @@ private static final long serialVersionUID = 0L;
         pageResponse_ = null;
       }
       return pageResponseBuilder_;
+    }
+
+    private com.trak.grpc.gateway.v1.PromotionMessage promotion_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.trak.grpc.gateway.v1.PromotionMessage, com.trak.grpc.gateway.v1.PromotionMessage.Builder, com.trak.grpc.gateway.v1.PromotionMessageOrBuilder> promotionBuilder_;
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public boolean hasPromotion() {
+      return promotionBuilder_ != null || promotion_ != null;
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public com.trak.grpc.gateway.v1.PromotionMessage getPromotion() {
+      if (promotionBuilder_ == null) {
+        return promotion_ == null ? com.trak.grpc.gateway.v1.PromotionMessage.getDefaultInstance() : promotion_;
+      } else {
+        return promotionBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public Builder setPromotion(com.trak.grpc.gateway.v1.PromotionMessage value) {
+      if (promotionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        promotion_ = value;
+        onChanged();
+      } else {
+        promotionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public Builder setPromotion(
+        com.trak.grpc.gateway.v1.PromotionMessage.Builder builderForValue) {
+      if (promotionBuilder_ == null) {
+        promotion_ = builderForValue.build();
+        onChanged();
+      } else {
+        promotionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public Builder mergePromotion(com.trak.grpc.gateway.v1.PromotionMessage value) {
+      if (promotionBuilder_ == null) {
+        if (promotion_ != null) {
+          promotion_ =
+            com.trak.grpc.gateway.v1.PromotionMessage.newBuilder(promotion_).mergeFrom(value).buildPartial();
+        } else {
+          promotion_ = value;
+        }
+        onChanged();
+      } else {
+        promotionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public Builder clearPromotion() {
+      if (promotionBuilder_ == null) {
+        promotion_ = null;
+        onChanged();
+      } else {
+        promotion_ = null;
+        promotionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public com.trak.grpc.gateway.v1.PromotionMessage.Builder getPromotionBuilder() {
+      
+      onChanged();
+      return getPromotionFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    public com.trak.grpc.gateway.v1.PromotionMessageOrBuilder getPromotionOrBuilder() {
+      if (promotionBuilder_ != null) {
+        return promotionBuilder_.getMessageOrBuilder();
+      } else {
+        return promotion_ == null ?
+            com.trak.grpc.gateway.v1.PromotionMessage.getDefaultInstance() : promotion_;
+      }
+    }
+    /**
+     * <code>.trak.grpc.gateway.v1.PromotionMessage promotion = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.trak.grpc.gateway.v1.PromotionMessage, com.trak.grpc.gateway.v1.PromotionMessage.Builder, com.trak.grpc.gateway.v1.PromotionMessageOrBuilder> 
+        getPromotionFieldBuilder() {
+      if (promotionBuilder_ == null) {
+        promotionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.trak.grpc.gateway.v1.PromotionMessage, com.trak.grpc.gateway.v1.PromotionMessage.Builder, com.trak.grpc.gateway.v1.PromotionMessageOrBuilder>(
+                getPromotion(),
+                getParentForChildren(),
+                isClean());
+        promotion_ = null;
+      }
+      return promotionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
